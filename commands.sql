@@ -1,3 +1,10 @@
+/*
+Hospital Plan for test data
+Locations are divided between a north wing, south wing, west wing, and so forth.
+12 Floors, 10 rooms a floor, 2 beds a room
+Example for identifying numbers: 12101 ---> Floor 12, 10th room, bed or office 1
+Person IDs can be randomly generated or seqential (1,2,3...)
+*/
 CREATE TABLE PersonInHospital (
 	personID INT,
 	FirstName VARCHAR(40),
