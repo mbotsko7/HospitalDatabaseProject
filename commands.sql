@@ -34,9 +34,10 @@ CREATE TABLE RegisteredNurse (
 CREATE TABLE OtherNurse (
 );
 
-CREATE TABLE CareCenter (
+CREATE TABLE CareCenter ( # Relationship with nurse?
 	Name VARCHAR(40),
 	Location VARCHAR(40)
+	CONSTRAINT pk_CCName PRIMARY KEY (Name);
 );
 
 CREATE TABLE Staff (
@@ -44,24 +45,28 @@ CREATE TABLE Staff (
 );
 
 CREATE TABLE Technician (
-	Skill VARCHAR(40)
+	Skill VARCHAR(40)	
 );
 
-CREATE TABLE Laboratory (
+CREATE TABLE Laboratory ( #Relationship with technician?
 	Name VARCHAR(40)
 	Location VARCHAR(40)
+	CONSTRAINT pk_LabName PRIMARY KEY (Name);
 );
 
 CREATE TABLE TechnicianLab (
 );
 
 CREATE TABLE Bed (
-	Bed# INT(3)
+	Bed INT(5) # Floor Numer 2 digits, Room Number 2 digits, Bed 1 digit
+	CONSTRAINT fk_roomNum FOREIGN KEY (Room);
 );
 
 CREATE TABLE Room (
 	Room INT(4),
 	Floor INT(2)
+	CONSTRAINT fk_CCName FOREIGN KEY (Name);
+	CONSTRAINT pk_roomNum PRIMARY KEY (Room);
 );
 
 CREATE TABLE Volunteer (
