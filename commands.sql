@@ -9,13 +9,13 @@ CREATE TABLE PersonInHospital (
 	personID INT,
 	FirstName VARCHAR(40),
 	LastName VARCHAR(40),
-	DateOfBirth DATE(),
+	DateOfBirth DATE,
 	ContactNumber VARCHAR(12),
 	CONSTRAINT pk_personID PRIMARY KEY (personID)
 );
 
 CREATE TABLE Employee ( 
-	HireDate DATE(),
+	HireDate DATE,
 	CONSTRAINT pk_personID PRIMARY KEY (personID),
 	CONSTRAINT fk_personID FOREIGN KEY (personID)
 	REFERENCES PersonInHospital (personID)
@@ -30,7 +30,7 @@ CREATE TABLE Physician (
 );
 
 CREATE TABLE Patient (
-	ContactDate DATE(),
+	ContactDate DATE,
 	EmergencyContact VARCHAR(12),
 	CONSTRAINT pk_personID PRIMARY KEY (personID),
 	CONSTRAINT fk_personID FOREIGN KEY (personID)
@@ -118,7 +118,7 @@ CREATE TABLE Volunteer (
 );
 
 CREATE TABLE Resident (
-	AdmittedDate DATE(),
+	AdmittedDate DATE,
 	Status VARCHAR(40),
 	CONSTRAINT pk_personID PRIMARY KEY (personID),
 	CONSTRAINT fk_personID FOREIGN KEY (personID)
@@ -132,7 +132,7 @@ CREATE TABLE Outpatient (
 );
 
 CREATE TABLE Visit (
-	VisitDate DATE(),
+	VisitDate DATE,
 	Comment VARCHAR(40),
 	CONSTRAINT fk_personID FOREIGN KEY (personID)
 	REFERENCES Outpatient (personID),
