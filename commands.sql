@@ -14,54 +14,68 @@ CREATE TABLE PersonInHospital (
 	CONSTRAINT pk_personID PRIMARY KEY (personID)
 );
 
-CREATE TABLE Employee ( 
+CREATE TABLE Employee (
+	personID INT, 
 	HireDate DATE,
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
+	CONSTRAINT pk_employeeID PRIMARY KEY (personID),
+	CONSTRAINT fk_employeeID FOREIGN KEY (personID)
 	REFERENCES PersonInHospital (personID)
 );
 
 CREATE TABLE Physician (
+	personID INT,
 	Specialty VARCHAR(40),
 	Pager VARCHAR(10),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
+	CONSTRAINT pk_physicianID PRIMARY KEY (personID),
+	CONSTRAINT fk_physicianID FOREIGN KEY (personID)
 	REFERENCES PersonInHospital (personID)
 );
 
 CREATE TABLE Patient (
+	personID INT,
 	ContactDate DATE,
 	EmergencyContact VARCHAR(12),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
+	CONSTRAINT pk_patientID PRIMARY KEY (personID),
+	CONSTRAINT fk_patientID FOREIGN KEY (personID)
 	REFERENCES PersonInHospital (personID)
 );
 
+CREATE TABLE Volunteer (
+	personID INT,
+	Skill VARCHAR(40),
+	CONSTRAINT pk_volunteerID PRIMARY KEY (personID),
+	CONSTRAINT fk_volunteerID FOREIGN KEY (personID)
+	REFERENCES PersonInHospital (personID)
+);
+
+CREATE TABLE CareCenter ( # Relationship with nurse?
+	Name VARCHAR(40),
+	Location VARCHAR(40)
+	 pk_CCName PRIMARY KEY (Name),
+	 fk_NurseInCharge FOREIGN KEY (personID)
+	REFERENCES RegisteredNurse (personID)
+);
+
 CREATE TABLE Nurse (
+	personID INT,
 	Certificate VARCHAR(40),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES PersonInHospital (personID),
-	CONSTRAINT fk_CCName FOREIGN KEY (Name)
+	 pk_nurseID PRIMARY KEY (personID),
+	 fk_nurseID FOREIGN KEY (personID)
+	REFERENCES Employee (personID),
+	 fk_CCName FOREIGN KEY (Name)
 	REFERENCES CareCenter (Name)
 );
 
 CREATE TABLE RegisteredNurse (
-	CONSTRAINT pk_personID PRIMARY KEY (personID),	
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
+	 pk_personID PRIMARY KEY (personID),	
+	 fk_personID FOREIGN KEY (personID)
 	REFERENCES PersonInHospital (personID),
-	CONSTRAINT fk_CCName FOREIGN KEY (Name)
+	 fk_CCName FOREIGN KEY (Name)
 	REFERENCES CareCenter (Name)
 );
 
 
-CREATE TABLE CareCenter ( # Relationship with nurse?
-	Name VARCHAR(40),
-	Location VARCHAR(40),
-	CONSTRAINT pk_CCName PRIMARY KEY (Name),
-	CONSTRAINT fk_NurseInCharge FOREIGN KEY (personID)
-	REFERENCES RegisteredNurse (personID)
-);
+
 #NOT DONE
 CREATE TABLE Staff (
 	JobClass VARCHAR(40),
@@ -110,12 +124,7 @@ CREATE TABLE Bed (
 );
 
 #NOT DONE
-CREATE TABLE Volunteer (
-	Skill VARCHAR(40),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES PersonInHospital (personID)
-);
+
 
 CREATE TABLE Resident (
 	AdmittedDate DATE,
