@@ -148,3 +148,155 @@ CREATE TABLE Visit (
 	CONSTRAINT fk_physID FOREIGN KEY (personID)
 	REFERENCES Physician(personID)
 );
+
+
+INSERT INTO PersonInHospital 
+VALUES (100, Frank, McGuire, 1986-04-02, 310-636-9955);
+
+INSERT INTO PersonInHospital 
+VALUES (101, Jennifer, Matthews, 1973-12-10, 310-819-6721);
+
+INSERT INTO PersonInHospital 
+VALUES (102, William, Thomas, 1971-05-24, 310-611-3773);
+
+INSERT INTO PersonInHospital 
+VALUES (103, Jason, Hamley, 1981-08-16, 310-487-3585);
+
+INSERT INTO PersonInHospital 
+VALUES (104, Christopher, Ketchum, 1982-11-06, 310-564-4582);
+
+INSERT INTO PersonInHospital 
+VALUES (105, Kenneth, Clark, 1975-12-21, 310-449-6425);
+
+INSERT INTO PersonInHospital 
+VALUES (106, Elizabeth, Parker, 1951-12-10, 310-801-3924);
+
+INSERT INTO PersonInHospital 
+VALUES (107, Maria, Shapiro, 1986-09-22, 310-670-5556);
+
+INSERT INTO PersonInHospital 
+VALUES (108, Charles, Orman, 1975-07-18, 424-881-2396);
+
+INSERT INTO PersonInHospital 
+VALUES (109, Betty, Swanson, 1953-03-19, 424-264-2158);
+
+INSERT INTO PersonInHospital 
+VALUES (110, Elizabeth, Hamley, 1981-11-23, 310-988-8859);
+
+INSERT INTO PersonInHospital 
+VALUES (111, Susan, Pickens, 1950-05-08, 424-410-1875);
+
+INSERT INTO PersonInHospital 
+VALUES (112, Karen, Garber, 1976-03-11, 424-871-6739);
+
+INSERT INTO PersonInHospital 
+VALUES (113, Carol, Heron, 1953-09-10, 424-978-7044);
+
+INSERT INTO PersonInHospital 
+VALUES (114, Paul, Howell, 1977-04-23, 310-564-4582);
+
+INSERT INTO PersonInHospital 
+VALUES (115, Lisa, Orman, 1971-05-24, 310-258-5684);
+
+INSERT INTO PersonInHospital 
+VALUES (116, Edward, Bennington, 1987-06-13, 310-449-6425);
+
+INSERT INTO PersonInHospital 
+VALUES (117, Daniel, LeRoy, 1971-06-08, 310-828-1064);
+
+INSERT INTO PersonInHospital 
+VALUES (118, Richard, Howell, 1987-04-27, 424-974-6843);
+
+INSERT INTO PersonInHospital 
+VALUES (119, Carol, Hunter, 1952-02-0-1, 310-828-1064);
+
+INSERT INTO PersonInHospital 
+VALUES (120, Nancy, Carr, 1966-02-02, 424-410-1875);
+
+INSERT INTO PersonInHospital 
+VALUES (121, David, Tredway, 1962-02-14, 310-501-3198);
+
+INSERT INTO PersonInHospital 
+VALUES (122, William, Kay, 1986-09-22, 310-330-9669);
+
+INSERT INTO PersonInHospital 
+VALUES (123, Joseph, Nichols, 1983-10-17, 310-360-6896);
+
+INSERT INTO PersonInHospital 
+VALUES (124, Barbara, Heron, 1962-02-14, 424-871-6739);
+
+INSERT INTO PersonInHospital 
+VALUES (125, Edward, Garber, 1986-04-02, 424-574-4754);
+
+INSERT INTO PersonInHospital 
+VALUES (126, Helen, Matthews, 1962-02-14, 310-258-5684);
+
+INSERT INTO PersonInHospital 
+VALUES (127, Edward, Brockman, 1983-10-17, 424-649-3944);
+
+INSERT INTO PersonInHospital 
+VALUES (128, Frank, Marx, 1989-01-03, 424-878-9584);
+
+INSERT INTO PersonInHospital 
+VALUES (129, Thomas, Howell, 1966-02-02, 424-574-4754);
+
+INSERT INTO PersonInHospital 
+VALUES (130, Carol, Harmes, 1966-05-17, 424-410-1875);
+
+INSERT INTO PersonInHospital 
+VALUES (131, Lisa, Harmes, 1959-02-00, 310-449-6425);
+
+INSERT INTO PersonInHospital 
+VALUES (132, Charles, Parker, 1950-05-08, 424-264-2158);
+
+INSERT INTO PersonInHospital 
+VALUES (133, John, Grayson, 1959-02-00, 424-410-1875);
+
+INSERT INTO PersonInHospital 
+VALUES (134, Thomas, McCourt, 1971-01-05, 310-930-7092);
+
+INSERT INTO PersonInHospital 
+VALUES (135, Joseph, Carter, 1989-07-15, 310-284-6396);
+
+INSERT INTO PersonInHospital 
+VALUES (136, Ruth, Holland, 1953-09-10, 310-761-8501);
+
+INSERT INTO PersonInHospital 
+VALUES (137, Michael, Zumbelh, 1986-09-22, 310-375-6237);
+
+INSERT INTO PersonInHospital 
+VALUES (138, Jose, Gomer, 1956-06-17, 310-773-1288);
+
+INSERT INTO PersonInHospital 
+VALUES (139, Thomas, Ketchum, 1973-12-10, 310-761-8501);
+
+INSERT INTO PersonInHospital 
+VALUES (140, James, Hyde, 1965-09-09, 310-442-6168);
+
+INSERT INTO PersonInHospital 
+VALUES (141, Christopher, McCourt, 1958-02-09, 424-810-5798);
+
+INSERT INTO PersonInHospital 
+VALUES (142, Larry, Harmes, 1959-10-29, 424-881-2396);
+
+INSERT INTO PersonInHospital 
+VALUES (143, Paul, Kaufman, 1987-06-13, 424-679-7195);
+
+INSERT INTO PersonInHospital 
+VALUES (144, Jason, Harte, 1973-12-10, 310-930-7092);
+
+INSERT INTO PersonInHospital 
+VALUES (145, Steven, Kaufman, 1959-10-29, 310-330-9669);
+
+INSERT INTO PersonInHospital 
+VALUES (146, Ronald, Zimmer, 1962-11-20, 310-291-5165);
+
+INSERT INTO PersonInHospital 
+VALUES (147, Gary, Daley, 1952-02-0-1, 310-330-9518);
+
+INSERT INTO PersonInHospital 
+VALUES (148, Jose, Daley, 1976-12-01, 310-694-7270);
+
+INSERT INTO PersonInHospital 
+VALUES (149, Kenneth, Wright, 1977-06-21, 424-878-9584);
+
