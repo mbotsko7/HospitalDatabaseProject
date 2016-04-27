@@ -48,7 +48,66 @@ CREATE TABLE Volunteer (
 	REFERENCES PersonInHospital (personID)
 );
 
-CREATE TABLE CareCenter ( # Relationship with nurse?
+CREATE TABLE Staff (
+	personID INT,
+	JobClass VARCHAR(40),
+	CONSTRAINT pk_staffID PRIMARY KEY (personID),
+	CONSTRAINT fk_staffID FOREIGN KEY (personID)
+	REFERENCES Employee (personID)
+);
+
+CREATE TABLE Technician (
+	personID INT,
+	Skill VARCHAR(40),
+	CONSTRAINT pk_technicianID PRIMARY KEY (personID),
+	CONSTRAINT fk_technicianID FOREIGN KEY (personID)
+	REFERENCES Employee (personID)
+);
+
+CREATE TABLE Laboratory ( 
+	Name VARCHAR(40),
+	LabLoc VARCHAR(40),
+	CONSTRAINT pk_LabName PRIMARY KEY (Name)
+);
+
+CREATE TABLE TechnicianLab (
+	Name VARCHAR(40),
+	personID INT,
+	CONSTRAINT fk_LabName FOREIGN KEY (Name)
+	REFERENCES Laboratory(Name),
+	CONSTRAINT fk_Technician FOREIGN KEY (personID)
+	REFERENCES Technician(personID)
+);
+
+CREATE TABLE Resident (
+	personID INT,
+	AdmittedDate DATE,
+	Status VARCHAR(40),
+	CONSTRAINT pk_residentID PRIMARY KEY (personID),
+	CONSTRAINT fk_residentID FOREIGN KEY (personID)
+	REFERENCES Patient (personID)
+);
+
+CREATE TABLE Outpatient (
+	personID INT,
+	CONSTRAINT pk_outpatientID PRIMARY KEY (personID),
+	CONSTRAINT fk_outpatientID FOREIGN KEY (personID)
+	REFERENCES Patient (personID)
+);
+
+CREATE TABLE Visit (
+	personID INT,
+	VisitDate DATE,
+	Comment VARCHAR(40),
+	CONSTRAINT fk_visitorID FOREIGN KEY (personID)
+	REFERENCES Outpatient (personID),
+	CONSTRAINT fk_physID FOREIGN KEY (personID)
+	REFERENCES Physician(personID)
+);
+
+#Cannot execute command
+
+CREATE TABLE CareCenter (
 	Name VARCHAR(40),
 	Location VARCHAR(40)
 	 pk_CCName PRIMARY KEY (Name),
@@ -74,39 +133,6 @@ CREATE TABLE RegisteredNurse (
 	REFERENCES CareCenter (Name)
 );
 
-
-
-#NOT DONE
-CREATE TABLE Staff (
-	JobClass VARCHAR(40),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES Employee (personID)
-);
-
-CREATE TABLE Technician (
-	Skill VARCHAR(40),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES Employee (personID)
-);
-
-CREATE TABLE Laboratory ( #Relationship with technician?
-	Name VARCHAR(40)
-	Location VARCHAR(40)
-	CONSTRAINT pk_LabName PRIMARY KEY (Name);
-);
-
-CREATE TABLE TechnicianLab (
-	CONSTRAINT fk_LabName FOREIGN KEY (Name)
-	REFERENCES Laboratory(Name),
-	CONSTRAINT fk_Technician FOREIGN KEY (personID)
-	REFERENCES Technician(Name)
-);
-
-
-
-#NOT DONE
 CREATE TABLE Room (
 	RoomNum INT(4),
 	Floor INT(2),
@@ -116,38 +142,13 @@ CREATE TABLE Room (
 );
 
 CREATE TABLE Bed (
-	Bed INT(5) # Floor Numer 2 digits, Room Number 2 digits, Bed 1 digit
+	Bed INT(5) 
 	CONSTRAINT pk_BedRoom PRIMARY KEY (Bed, RoomNum)
 	REFERENCES Room(RoomNum)
 	CONSTRAINT fk_roomNum FOREIGN KEY (Room)
 	REFERENCES Room (RoomNum)
 );
 
-#NOT DONE
-
-
-CREATE TABLE Resident (
-	AdmittedDate DATE,
-	Status VARCHAR(40),
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES Patient (personID)
-);
-
-CREATE TABLE Outpatient (
-	CONSTRAINT pk_personID PRIMARY KEY (personID),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES Patient (personID)
-);
-
-CREATE TABLE Visit (
-	VisitDate DATE,
-	Comment VARCHAR(40),
-	CONSTRAINT fk_personID FOREIGN KEY (personID)
-	REFERENCES Outpatient (personID),
-	CONSTRAINT fk_physID FOREIGN KEY (personID)
-	REFERENCES Physician(personID)
-);
 
 
 INSERT INTO PersonInHospital 
