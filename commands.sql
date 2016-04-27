@@ -107,45 +107,63 @@ CREATE TABLE Visit (
 
 #Cannot execute command
 
+CREATE TABLE CareCenter ( #actual
+	Name VARCHAR(40),
+	Location VARCHAR(40),
+	CONSTRAINT pk_CCName PRIMARY KEY (Name)
+);
+/*
 CREATE TABLE CareCenter (
 	Name VARCHAR(40),
 	Location VARCHAR(40)
-	 pk_CCName PRIMARY KEY (Name),
-	 fk_NurseInCharge FOREIGN KEY (personID)
+	pk_CCName PRIMARY KEY (Name),
+	fk_NurseInCharge FOREIGN KEY (personID)
 	REFERENCES RegisteredNurse (personID)
-);
+); */
 
 CREATE TABLE Nurse (
+    Name VARCHAR(40),
 	personID INT,
 	Certificate VARCHAR(40),
-	 pk_nurseID PRIMARY KEY (personID),
-	 fk_nurseID FOREIGN KEY (personID)
+	CONSTRAINT pk_nurseID PRIMARY KEY (personID),
+	CONSTRAINT fk_nurseID FOREIGN KEY (personID)
 	REFERENCES Employee (personID),
-	 fk_CCName FOREIGN KEY (Name)
+	CONSTRAINT fk_CCName FOREIGN KEY (Name)
 	REFERENCES CareCenter (Name)
 );
 
 CREATE TABLE RegisteredNurse (
-	 pk_personID PRIMARY KEY (personID),	
-	 fk_personID FOREIGN KEY (personID)
-	REFERENCES PersonInHospital (personID),
-	 fk_CCName FOREIGN KEY (Name)
-	REFERENCES CareCenter (Name)
+         personID INT,
+         Name VARCHAR(40),
+	 CONSTRAINT pk_rnID PRIMARY KEY (personID),	
+	 CONSTRAINT fk_rnID FOREIGN KEY (personID)
+         REFERENCES PersonInHospital (personID),
+	 CONSTRAINT fk_RNCCName FOREIGN KEY (Name)
+         REFERENCES CareCenter (Name)
 );
 
+ALTER TABLE CareCenter
+ADD personID INT
+
+ALTER TABLE CareCenter
+ADD CONSTRAINT fk_NurseInCharge FOREIGN KEY (personID)
+REFERENCES RegisteredNurse(personID)
+
 CREATE TABLE Room (
-	RoomNum INT(4),
-	Floor INT(2),
-	CONSTRAINT pk_roomNum PRIMARY KEY (Room),
-	CONSTRAINT fk_CCName FOREIGN KEY (Name)
+	Name VARCHAR(40),
+	RoomNum INT,
+	Floor INT,
+	CONSTRAINT pk_roomNum PRIMARY KEY (RoomNum),
+	CONSTRAINT fk_RName FOREIGN KEY (Name)
 	REFERENCES CareCenter(Name)
 );
 
+
 CREATE TABLE Bed (
-	Bed INT(5) 
-	CONSTRAINT pk_BedRoom PRIMARY KEY (Bed, RoomNum)
-	REFERENCES Room(RoomNum)
-	CONSTRAINT fk_roomNum FOREIGN KEY (Room)
+	Bed INT,
+        RoomNum INT,
+	CONSTRAINT pk_BedRoom PRIMARY KEY (Bed, RoomNum),
+	CONSTRAINT fk_roomNum FOREIGN KEY (RoomNum)
 	REFERENCES Room (RoomNum)
 );
 
