@@ -161,7 +161,7 @@ CREATE TABLE Room (
 
 CREATE TABLE Bed (
 	Bed INT,
-        RoomNum INT,
+    RoomNum INT,
 	CONSTRAINT pk_BedRoom PRIMARY KEY (Bed, RoomNum),
 	CONSTRAINT fk_roomNum FOREIGN KEY (RoomNum)
 	REFERENCES Room (RoomNum)
