@@ -76,7 +76,8 @@ CREATE TABLE TechnicianLab (
 	CONSTRAINT fk_LabName FOREIGN KEY (Name)
 	REFERENCES Laboratory(Name),
 	CONSTRAINT fk_Technician FOREIGN KEY (personID)
-	REFERENCES Technician(personID)
+	REFERENCES Technician(personID),
+	CONSTRAINT pk_techlab PRIMARY KEY (Name, personID)
 );
 
 CREATE TABLE Resident (
@@ -97,12 +98,14 @@ CREATE TABLE Outpatient (
 
 CREATE TABLE Visit (
 	personID INT,
+	physID INT,
 	VisitDate DATE,
 	Comment VARCHAR(40),
 	CONSTRAINT fk_visitorID FOREIGN KEY (personID)
 	REFERENCES Outpatient (personID),
 	CONSTRAINT fk_physID FOREIGN KEY (personID)
-	REFERENCES Physician(personID)
+	REFERENCES Physician(personID),
+	CONSTRAINT pk_visit PRIMARY KEY (personID, physID, VisitDate)
 );
 
 #Cannot execute command
