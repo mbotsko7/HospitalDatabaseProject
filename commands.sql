@@ -33,11 +33,14 @@ CREATE TABLE Physician (
 
 CREATE TABLE Patient (
 	personID INT,
+	physID INT,
 	ContactDate DATE,
 	EmergencyContact VARCHAR(12),
 	CONSTRAINT pk_patientID PRIMARY KEY (personID),
 	CONSTRAINT fk_patientID FOREIGN KEY (personID)
-	REFERENCES PersonInHospital (personID)
+	REFERENCES PersonInHospital (personID),
+	CONSTRAINT fk_drID FOREIGN KEY (physID)
+	REFERENCES Physician(personID)
 );
 
 CREATE TABLE Volunteer (
