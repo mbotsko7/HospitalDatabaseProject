@@ -149,11 +149,11 @@ CREATE TABLE RegisteredNurse (
 );
 
 ALTER TABLE CareCenter
-ADD personID INT
+ADD personID INT;
 
 ALTER TABLE CareCenter
 ADD CONSTRAINT fk_NurseInCharge FOREIGN KEY (personID)
-REFERENCES RegisteredNurse(personID)
+REFERENCES RegisteredNurse(personID);
 
 CREATE TABLE Room (
 	Name VARCHAR(40),
@@ -172,29 +172,29 @@ CREATE TABLE Bed (
 	CONSTRAINT pk_BedRoom PRIMARY KEY (BedNum, RoomNum),
 	CONSTRAINT fk_roomNum FOREIGN KEY (RoomNum)
 	REFERENCES Room (RoomNum),
-	CONSTRAINT fk_rID PRIMARY KEY (personID)
+	CONSTRAINT fk_rID FOREIGN KEY (personID)
 	REFERENCES Resident(personID)
 );
 
 #EDIT 05_02, new business rules
 ALTER TABLE CareCenter
-ADD beginVisitHours TIME
+ADD beginVisitHours TIME;
 
 ALTER TABLE CareCenter
-ADD endVisitHours TIME
+ADD endVisitHours TIME;
 
 ALTER TABLE Laboratory
-ADD beginBusinessHours TIME
+ADD beginBusinessHours TIME;
 
 ALTER TABLE Laboratory
-ADD endBusinessHours TIME
+ADD endBusinessHours TIME;
 
 
 
 # Poulate the PersonInHospital
 
 INSERT INTO PersonInHospital 
-VALUES (100, Jose, Kay, 1962-02-0-1, 424-435-4806);
+VALUES (100, 'Jose', 'Kay', '1962-02-01', '424-435-4806');
 
 INSERT INTO PersonInHospital 
 VALUES (101, Edward, Daley, 1976-04-06, 424-795-1878);
