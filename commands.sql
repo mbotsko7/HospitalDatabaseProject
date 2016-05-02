@@ -176,11 +176,18 @@ CREATE TABLE Bed (
 	REFERENCES Resident(personID)
 );
 
-#EDIT 05_02
+#EDIT 05_02, new business rules
 ALTER TABLE CareCenter
-ADD beginVisitHours INT
+ADD beginVisitHours TIME
+
 ALTER TABLE CareCenter
-ADD endVisitHours INT
+ADD endVisitHours TIME
+
+ALTER TABLE Laboratory
+ADD beginBusinessHours TIME
+
+ALTER TABLE Laboratory
+ADD endBusinessHours TIME
 
 
 
