@@ -177,154 +177,863 @@ CREATE TABLE Bed (
 );
 
 
+# Poulate the PersonInHospital
 
 INSERT INTO PersonInHospital 
-VALUES (100, Frank, McGuire, 1986-04-02, 310-636-9955);
+VALUES (100, Jose, Kay, 1962-02-0-1, 424-435-4806);
 
 INSERT INTO PersonInHospital 
-VALUES (101, Jennifer, Matthews, 1973-12-10, 310-819-6721);
+VALUES (101, Edward, Daley, 1976-04-06, 424-795-1878);
 
 INSERT INTO PersonInHospital 
-VALUES (102, William, Thomas, 1971-05-24, 310-611-3773);
+VALUES (102, Robert, Holland, 1968-08-19, 424-468-3353);
 
 INSERT INTO PersonInHospital 
-VALUES (103, Jason, Hamley, 1981-08-16, 310-487-3585);
+VALUES (103, Frank, Thayer, 1975-03-18, 310-351-3087);
 
 INSERT INTO PersonInHospital 
-VALUES (104, Christopher, Ketchum, 1982-11-06, 310-564-4582);
+VALUES (104, Linda, Gomer, 1968-08-19, 310-351-3087);
 
 INSERT INTO PersonInHospital 
-VALUES (105, Kenneth, Clark, 1975-12-21, 310-449-6425);
+VALUES (200, Patricia, Hamley, 1979-03-11, 310-965-6337);
 
 INSERT INTO PersonInHospital 
-VALUES (106, Elizabeth, Parker, 1951-12-10, 310-801-3924);
+VALUES (201, Charles, York, 1986-01-10, 424-808-6698);
 
 INSERT INTO PersonInHospital 
-VALUES (107, Maria, Shapiro, 1986-09-22, 310-670-5556);
+VALUES (202, Sandra, Holland, 1961-02-13, 424-918-4509);
 
 INSERT INTO PersonInHospital 
-VALUES (108, Charles, Orman, 1975-07-18, 424-881-2396);
+VALUES (203, Donna, Garber, 1973-12-29, 310-692-7304);
 
 INSERT INTO PersonInHospital 
-VALUES (109, Betty, Swanson, 1953-03-19, 424-264-2158);
+VALUES (204, Kenneth, Pickens, 1982-03-30, 310-707-8829);
 
 INSERT INTO PersonInHospital 
-VALUES (110, Elizabeth, Hamley, 1981-11-23, 310-988-8859);
+VALUES (205, Maria, McGuire, 1975-09-17, 424-918-4509);
 
 INSERT INTO PersonInHospital 
-VALUES (111, Susan, Pickens, 1950-05-08, 424-410-1875);
+VALUES (206, Mary, Hamley, 1956-05-06, 424-468-3353);
 
 INSERT INTO PersonInHospital 
-VALUES (112, Karen, Garber, 1976-03-11, 424-871-6739);
+VALUES (207, Edward, Davis, 1972-05-06, 424-313-5985);
 
 INSERT INTO PersonInHospital 
-VALUES (113, Carol, Heron, 1953-09-10, 424-978-7044);
+VALUES (208, William, McCreary, 1988-12-28, 310-358-5513);
 
 INSERT INTO PersonInHospital 
-VALUES (114, Paul, Howell, 1977-04-23, 310-564-4582);
+VALUES (209, Frank, Tredway, 1976-02-0-1, 310-707-8829);
 
 INSERT INTO PersonInHospital 
-VALUES (115, Lisa, Orman, 1971-05-24, 310-258-5684);
+VALUES (210, Gary, Thayer, 1979-03-11, 424-711-8008);
 
 INSERT INTO PersonInHospital 
-VALUES (116, Edward, Bennington, 1987-06-13, 310-449-6425);
+VALUES (211, Betty, Shapiro, 1961-05-10, 424-485-5828);
 
 INSERT INTO PersonInHospital 
-VALUES (117, Daniel, LeRoy, 1971-06-08, 310-828-1064);
+VALUES (212, Susan, Daley, 1956-09-23, 424-763-3802);
 
 INSERT INTO PersonInHospital 
-VALUES (118, Richard, Howell, 1987-04-27, 424-974-6843);
+VALUES (213, Daniel, Brighton, 1980-03-06, 310-707-8829);
 
 INSERT INTO PersonInHospital 
-VALUES (119, Carol, Hunter, 1952-02-0-1, 310-828-1064);
+VALUES (214, Thomas, York, 1955-06-26, 310-351-3087);
 
 INSERT INTO PersonInHospital 
-VALUES (120, Nancy, Carr, 1966-02-02, 424-410-1875);
+VALUES (300, Linda, Hyde, 1975-09-17, 424-796-7133);
 
 INSERT INTO PersonInHospital 
-VALUES (121, David, Tredway, 1962-02-14, 310-501-3198);
+VALUES (301, Karen, LeRoy, 1977-05-02, 424-406-9557);
 
 INSERT INTO PersonInHospital 
-VALUES (122, William, Kay, 1986-09-22, 310-330-9669);
+VALUES (302, Donna, Kaufman, 1958-01-25, 424-795-1878);
 
 INSERT INTO PersonInHospital 
-VALUES (123, Joseph, Nichols, 1983-10-17, 310-360-6896);
+VALUES (303, George, Ketchum, 1976-04-06, 424-918-4509);
 
 INSERT INTO PersonInHospital 
-VALUES (124, Barbara, Heron, 1962-02-14, 424-871-6739);
+VALUES (304, Linda, Hamley, 1961-02-13, 310-515-7824);
 
 INSERT INTO PersonInHospital 
-VALUES (125, Edward, Garber, 1986-04-02, 424-574-4754);
+VALUES (400, Paul, LeRoy, 1969-08-02, 424-711-8008);
 
 INSERT INTO PersonInHospital 
-VALUES (126, Helen, Matthews, 1962-02-14, 310-258-5684);
+VALUES (401, Mary, Davis, 1956-05-06, 310-692-7304);
 
 INSERT INTO PersonInHospital 
-VALUES (127, Edward, Brockman, 1983-10-17, 424-649-3944);
+VALUES (402, Helen, Gomer, 1969-11-26, 424-560-5196);
 
 INSERT INTO PersonInHospital 
-VALUES (128, Frank, Marx, 1989-01-03, 424-878-9584);
+VALUES (403, Daniel, McGuire, 1955-06-26, 424-795-1878);
 
 INSERT INTO PersonInHospital 
-VALUES (129, Thomas, Howell, 1966-02-02, 424-574-4754);
+VALUES (404, James, Hamley, 1969-03-16, 310-361-8461);
 
 INSERT INTO PersonInHospital 
-VALUES (130, Carol, Harmes, 1966-05-17, 424-410-1875);
+VALUES (405, Edward, Harte, 1964-11-18, 310-692-7304);
 
 INSERT INTO PersonInHospital 
-VALUES (131, Lisa, Harmes, 1959-02-00, 310-449-6425);
+VALUES (406, Barbara, Garber, 1962-02-0-1, 310-758-9954);
 
 INSERT INTO PersonInHospital 
-VALUES (132, Charles, Parker, 1950-05-08, 424-264-2158);
+VALUES (407, Donna, Tredway, 1955-06-26, 424-918-4509);
 
 INSERT INTO PersonInHospital 
-VALUES (133, John, Grayson, 1959-02-00, 424-410-1875);
+VALUES (408, Helen, Garber, 1955-06-26, 424-702-5854);
 
 INSERT INTO PersonInHospital 
-VALUES (134, Thomas, McCourt, 1971-01-05, 310-930-7092);
+VALUES (409, Susan, Holland, 1968-08-19, 310-535-6933);
 
 INSERT INTO PersonInHospital 
-VALUES (135, Joseph, Carter, 1989-07-15, 310-284-6396);
+VALUES (500, Richard, Davis, 1982-03-30, 310-515-7824);
 
 INSERT INTO PersonInHospital 
-VALUES (136, Ruth, Holland, 1953-09-10, 310-761-8501);
+VALUES (501, Jose, Orman, 1988-04-30, 424-485-5828);
 
 INSERT INTO PersonInHospital 
-VALUES (137, Michael, Zumbelh, 1986-09-22, 310-375-6237);
+VALUES (502, Lisa, York, 1977-09-28, 424-247-6464);
 
 INSERT INTO PersonInHospital 
-VALUES (138, Jose, Gomer, 1956-06-17, 310-773-1288);
+VALUES (503, Timothy, Thayer, 1972-03-21, 310-413-8247);
 
 INSERT INTO PersonInHospital 
-VALUES (139, Thomas, Ketchum, 1973-12-10, 310-761-8501);
+VALUES (504, James, Kay, 1974-05-30, 310-283-7289);
 
 INSERT INTO PersonInHospital 
-VALUES (140, James, Hyde, 1965-09-09, 310-442-6168);
+VALUES (600, Dorothy, Zimmer, 1973-12-29, 424-249-6484);
 
 INSERT INTO PersonInHospital 
-VALUES (141, Christopher, McCourt, 1958-02-09, 424-810-5798);
+VALUES (601, Helen, Swanson, 1956-09-23, 424-855-8402);
 
 INSERT INTO PersonInHospital 
-VALUES (142, Larry, Harmes, 1959-10-29, 424-881-2396);
+VALUES (602, Anthony, Harte, 1956-05-06, 310-358-5513);
 
 INSERT INTO PersonInHospital 
-VALUES (143, Paul, Kaufman, 1987-06-13, 424-679-7195);
+VALUES (603, Michael, Grimes, 1976-02-0-1, 310-758-9954);
 
 INSERT INTO PersonInHospital 
-VALUES (144, Jason, Harte, 1973-12-10, 310-930-7092);
+VALUES (604, Gary, Hyde, 1971-05-02, 424-581-8797);
 
 INSERT INTO PersonInHospital 
-VALUES (145, Steven, Kaufman, 1959-10-29, 310-330-9669);
+VALUES (605, Richard, Gomer, 1965-08-12, 424-432-4797);
 
 INSERT INTO PersonInHospital 
-VALUES (146, Ronald, Zimmer, 1962-11-20, 310-291-5165);
+VALUES (606, Mary, Heron, 1951-03-25, 424-512-5373);
 
 INSERT INTO PersonInHospital 
-VALUES (147, Gary, Daley, 1952-02-0-1, 310-330-9518);
+VALUES (607, Anthony, Parker, 1988-04-30, 310-720-2079);
 
 INSERT INTO PersonInHospital 
-VALUES (148, Jose, Daley, 1976-12-01, 310-694-7270);
+VALUES (608, Robert, Heron, 1975-09-17, 310-254-8330);
 
 INSERT INTO PersonInHospital 
-VALUES (149, Kenneth, Wright, 1977-06-21, 424-878-9584);
+VALUES (609, Mary, Thayer, 1986-08-05, 310-692-7304);
 
+INSERT INTO PersonInHospital 
+VALUES (610, Ronald, Zoer, 1965-08-12, 424-921-9536);
+
+INSERT INTO PersonInHospital 
+VALUES (611, Sandra, Marx, 1972-03-21, 424-512-5373);
+
+INSERT INTO PersonInHospital 
+VALUES (612, Thomas, Orman, 1984-11-18, 310-707-8829);
+
+INSERT INTO PersonInHospital 
+VALUES (613, Brian, McCourt, 1970-10-10, 424-432-4797);
+
+INSERT INTO PersonInHospital 
+VALUES (614, Paul, Pickens, 1974-05-30, 424-795-1878);
+
+INSERT INTO PersonInHospital 
+VALUES (615, Christopher, Gomer, 1978-11-28, 424-808-6698);
+
+INSERT INTO PersonInHospital 
+VALUES (616, Brian, McGuire, 1956-05-06, 424-796-7133);
+
+INSERT INTO PersonInHospital 
+VALUES (617, Timothy, Grayson, 1951-03-25, 310-346-4892);
+
+INSERT INTO PersonInHospital 
+VALUES (618, Robert, Grimes, 1968-08-19, 424-405-5327);
+
+INSERT INTO PersonInHospital 
+VALUES (619, Paul, Benson, 1969-11-26, 310-283-7289);
+
+INSERT INTO PersonInHospital 
+VALUES (620, Richard, Walker, 1976-04-06, 310-692-7304);
+
+INSERT INTO PersonInHospital 
+VALUES (621, Barbara, Davis, 1971-05-02, 424-921-9536);
+
+INSERT INTO PersonInHospital 
+VALUES (622, Thomas, Bruckner, 1962-02-0-1, 310-442-1401);
+
+INSERT INTO PersonInHospital 
+VALUES (623, Donna, Heron, 1989-10-14, 424-432-4797);
+
+INSERT INTO PersonInHospital 
+VALUES (624, John, Zoer, 1958-01-25, 424-702-5854);
+
+INSERT INTO PersonInHospital 
+VALUES (625, George, Heron, 1951-09-29, 310-346-4892);
+
+INSERT INTO PersonInHospital 
+VALUES (626, Elizabeth, McCreary, 1979-03-11, 424-921-9536);
+
+INSERT INTO PersonInHospital 
+VALUES (627, Sandra, Hunter, 1975-03-18, 424-479-7376);
+
+INSERT INTO PersonInHospital 
+VALUES (628, Helen, Thomas, 1977-09-28, 424-313-5985);
+
+INSERT INTO PersonInHospital 
+VALUES (629, William, Holland, 1976-02-0-1, 424-468-3353);
+
+INSERT INTO PersonInHospital 
+VALUES (630, Robert, Bruckner, 1958-01-25, 310-692-7304);
+
+INSERT INTO PersonInHospital 
+VALUES (631, Larry, Tredway, 1988-04-30, 424-711-8008);
+
+INSERT INTO PersonInHospital 
+VALUES (632, Jose, Harris, 1984-07-27, 424-983-5228);
+
+INSERT INTO PersonInHospital 
+VALUES (633, Jose, Grimes, 1973-12-29, 424-512-5373);
+
+INSERT INTO PersonInHospital 
+VALUES (634, Betty, Pickens, 1959-03-25, 310-319-4733);
+
+INSERT INTO PersonInHospital 
+VALUES (635, Kenneth, Heron, 1964-11-18, 310-361-8461);
+
+INSERT INTO PersonInHospital 
+VALUES (636, Maria, Wright, 1951-09-29, 310-319-4733);
+
+INSERT INTO PersonInHospital 
+VALUES (637, Margaret, Tredway, 1984-07-27, 424-581-8797);
+
+INSERT INTO PersonInHospital 
+VALUES (638, Linda, Tredway, 1958-01-25, 310-401-4089);
+
+INSERT INTO PersonInHospital 
+VALUES (639, Kevin, Grayson, 1960-10-11, 310-965-6337);
+
+INSERT INTO PersonInHospital 
+VALUES (640, Lisa, Heron, 1976-02-0-1, 310-361-8461);
+
+INSERT INTO PersonInHospital 
+VALUES (641, Michael, Kay, 1959-03-25, 424-522-9521);
+
+INSERT INTO PersonInHospital 
+VALUES (642, Anthony, Bennington, 1972-03-21, 424-249-6484);
+
+INSERT INTO PersonInHospital 
+VALUES (643, Steven, Wright, 1981-01-28, 424-522-9521);
+
+INSERT INTO PersonInHospital 
+VALUES (644, Edward, McCourt, 1961-02-13, 424-485-5828);
+
+INSERT INTO PersonInHospital 
+VALUES (645, Donald, Tredway, 1956-09-23, 310-319-4733);
+
+INSERT INTO PersonInHospital 
+VALUES (646, Frank, Zumbelh, 1975-09-17, 310-707-8829);
+
+INSERT INTO PersonInHospital 
+VALUES (647, James, Grayson, 1986-01-10, 310-758-9954);
+
+INSERT INTO PersonInHospital 
+VALUES (648, Anthony, Shapiro, 1968-08-19, 310-442-1401);
+
+INSERT INTO PersonInHospital 
+VALUES (649, Kevin, Kaufman, 1968-08-19, 424-581-8797);
+
+INSERT INTO PersonInHospital 
+VALUES (650, Nancy, Kay, 1962-02-0-1, 424-468-3353);
+
+INSERT INTO PersonInHospital 
+VALUES (651, Daniel, Brighton, 1956-05-06, 424-212-2711);
+
+INSERT INTO PersonInHospital 
+VALUES (652, Donna, Harris, 1976-02-0-1, 424-468-3353);
+
+INSERT INTO PersonInHospital 
+VALUES (653, Ronald, Brockman, 1977-05-02, 424-313-5985);
+
+INSERT INTO PersonInHospital 
+VALUES (654, Anthony, Carr, 1975-03-18, 310-358-5513);
+
+INSERT INTO PersonInHospital 
+VALUES (655, Dorothy, Swanson, 1970-10-10, 310-630-5744);
+
+INSERT INTO PersonInHospital 
+VALUES (656, Karen, Benson, 1976-04-06, 310-361-8461);
+
+INSERT INTO PersonInHospital 
+VALUES (657, Jeffrey, Harris, 1984-07-27, 424-702-5854);
+
+INSERT INTO PersonInHospital 
+VALUES (658, Steven, McCreary, 1976-04-06, 424-313-5985);
+
+INSERT INTO PersonInHospital 
+VALUES (659, Thomas, Tredway, 1988-12-28, 424-485-5828);
+
+INSERT INTO PersonInHospital 
+VALUES (700, George, Walker, 1980-12-11, 310-539-2485);
+
+INSERT INTO PersonInHospital 
+VALUES (701, Betty, Ketchum, 1950-04-16, 310-777-4461);
+
+INSERT INTO PersonInHospital 
+VALUES (702, William, Ketchum, 1954-01-17, 424-310-7163);
+
+INSERT INTO PersonInHospital 
+VALUES (703, Joseph, Tredway, 1989-06-10, 310-368-1615);
+
+INSERT INTO PersonInHospital 
+VALUES (704, Matthew, Davis, 1950-07-18, 424-442-9302);
+
+INSERT INTO PersonInHospital 
+VALUES (705, William, Harmes, 1966-02-12, 424-519-9350);
+
+INSERT INTO PersonInHospital 
+VALUES (706, Kenneth, Bennington, 1950-07-18, 310-309-8803);
+
+INSERT INTO PersonInHospital 
+VALUES (707, Ronald, Chapman, 1974-10-25, 310-286-8720);
+
+INSERT INTO PersonInHospital 
+VALUES (708, Gary, Kay, 1975-12-27, 310-441-3754);
+
+INSERT INTO PersonInHospital 
+VALUES (709, Edward, Hyde, 1962-11-17, 310-465-8897);
+
+INSERT INTO PersonInHospital 
+VALUES (710, Edward, Kay, 1962-11-17, 310-317-3686);
+
+INSERT INTO PersonInHospital 
+VALUES (711, Elizabeth, Zimmer, 1987-06-04, 310-414-8094);
+
+INSERT INTO PersonInHospital 
+VALUES (712, Kenneth, Pickens, 1987-06-04, 310-703-3843);
+
+INSERT INTO PersonInHospital 
+VALUES (713, George, LeRoy, 1986-01-02, 424-238-9226);
+
+INSERT INTO PersonInHospital 
+VALUES (714, Frank, Hamley, 1986-12-27, 310-892-8558);
+
+INSERT INTO PersonInHospital 
+VALUES (715, Helen, Kaufman, 1977-03-30, 424-662-1426);
+
+INSERT INTO PersonInHospital 
+VALUES (716, Margaret, Chapman, 1957-02-20, 424-310-7163);
+
+INSERT INTO PersonInHospital 
+VALUES (717, Susan, Davis, 1967-05-24, 310-776-8869);
+
+INSERT INTO PersonInHospital 
+VALUES (718, Steven, Pickens, 1974-10-27, 424-310-7163);
+
+INSERT INTO PersonInHospital 
+VALUES (719, Linda, Wright, 1957-02-20, 310-465-8897);
+# PersonInHospital populated
+
+# Populate Physician
+INSERT INTO Physician 
+VALUES (100, Jose, Kay, 1962-02-0-1, 424-435-4806);
+
+INSERT INTO Physician 
+VALUES (101, Edward, Daley, 1976-04-06, 424-795-1878);
+
+INSERT INTO Physician 
+VALUES (102, Robert, Holland, 1968-08-19, 424-468-3353);
+
+INSERT INTO Physician 
+VALUES (103, Frank, Thayer, 1975-03-18, 310-351-3087);
+
+INSERT INTO Physician 
+VALUES (104, Linda, Gomer, 1968-08-19, 310-351-3087);
+# Physician populated
+
+# Populate Employee
+INSERT INTO Employee 
+VALUES (200, Patricia, Hamley, 1979-03-11, 310-965-6337);
+
+INSERT INTO Employee 
+VALUES (201, Charles, York, 1986-01-10, 424-808-6698);
+
+INSERT INTO Employee 
+VALUES (202, Sandra, Holland, 1961-02-13, 424-918-4509);
+
+INSERT INTO Employee 
+VALUES (203, Donna, Garber, 1973-12-29, 310-692-7304);
+
+INSERT INTO Employee 
+VALUES (204, Kenneth, Pickens, 1982-03-30, 310-707-8829);
+
+INSERT INTO Employee 
+VALUES (205, Maria, McGuire, 1975-09-17, 424-918-4509);
+
+INSERT INTO Employee 
+VALUES (206, Mary, Hamley, 1956-05-06, 424-468-3353);
+
+INSERT INTO Employee 
+VALUES (207, Edward, Davis, 1972-05-06, 424-313-5985);
+
+INSERT INTO Employee 
+VALUES (208, William, McCreary, 1988-12-28, 310-358-5513);
+
+INSERT INTO Employee 
+VALUES (209, Frank, Tredway, 1976-02-0-1, 310-707-8829);
+
+INSERT INTO Employee 
+VALUES (210, Gary, Thayer, 1979-03-11, 424-711-8008);
+
+INSERT INTO Employee 
+VALUES (211, Betty, Shapiro, 1961-05-10, 424-485-5828);
+
+INSERT INTO Employee 
+VALUES (212, Susan, Daley, 1956-09-23, 424-763-3802);
+
+INSERT INTO Employee 
+VALUES (213, Daniel, Brighton, 1980-03-06, 310-707-8829);
+
+INSERT INTO Employee 
+VALUES (214, Thomas, York, 1955-06-26, 310-351-3087);
+
+
+INSERT INTO Employee 
+VALUES (300, Linda, Hyde, 1975-09-17, 424-796-7133);
+
+INSERT INTO Employee 
+VALUES (301, Karen, LeRoy, 1977-05-02, 424-406-9557);
+
+INSERT INTO Employee 
+VALUES (302, Donna, Kaufman, 1958-01-25, 424-795-1878);
+
+INSERT INTO Employee 
+VALUES (303, George, Ketchum, 1976-04-06, 424-918-4509);
+
+INSERT INTO Employee 
+VALUES (304, Linda, Hamley, 1961-02-13, 310-515-7824);
+
+INSERT INTO Employee 
+VALUES (400, Paul, LeRoy, 1969-08-02, 424-711-8008);
+
+INSERT INTO Employee 
+VALUES (401, Mary, Davis, 1956-05-06, 310-692-7304);
+
+INSERT INTO Employee 
+VALUES (402, Helen, Gomer, 1969-11-26, 424-560-5196);
+
+INSERT INTO Employee 
+VALUES (403, Daniel, McGuire, 1955-06-26, 424-795-1878);
+
+INSERT INTO Employee 
+VALUES (404, James, Hamley, 1969-03-16, 310-361-8461);
+
+INSERT INTO Employee 
+VALUES (405, Edward, Harte, 1964-11-18, 310-692-7304);
+
+INSERT INTO Employee 
+VALUES (406, Barbara, Garber, 1962-02-0-1, 310-758-9954);
+
+INSERT INTO Employee 
+VALUES (407, Donna, Tredway, 1955-06-26, 424-918-4509);
+
+INSERT INTO Employee 
+VALUES (408, Helen, Garber, 1955-06-26, 424-702-5854);
+
+INSERT INTO Employee 
+VALUES (409, Susan, Holland, 1968-08-19, 310-535-6933);
+
+
+INSERT INTO Employee 
+VALUES (500, Richard, Davis, 1982-03-30, 310-515-7824);
+
+INSERT INTO Employee 
+VALUES (501, Jose, Orman, 1988-04-30, 424-485-5828);
+
+INSERT INTO Employee 
+VALUES (502, Lisa, York, 1977-09-28, 424-247-6464);
+
+INSERT INTO Employee 
+VALUES (503, Timothy, Thayer, 1972-03-21, 310-413-8247);
+
+INSERT INTO Employee 
+VALUES (504, James, Kay, 1974-05-30, 310-283-7289);
+# Employee populated
+
+# populate Nurse
+INSERT INTO Nurse 
+VALUES (200, Patricia, Hamley, 1979-03-11, 310-965-6337);
+
+INSERT INTO Nurse 
+VALUES (201, Charles, York, 1986-01-10, 424-808-6698);
+
+INSERT INTO Nurse 
+VALUES (202, Sandra, Holland, 1961-02-13, 424-918-4509);
+
+INSERT INTO Nurse 
+VALUES (203, Donna, Garber, 1973-12-29, 310-692-7304);
+
+INSERT INTO Nurse 
+VALUES (204, Kenneth, Pickens, 1982-03-30, 310-707-8829);
+
+INSERT INTO Nurse 
+VALUES (205, Maria, McGuire, 1975-09-17, 424-918-4509);
+
+INSERT INTO Nurse 
+VALUES (206, Mary, Hamley, 1956-05-06, 424-468-3353);
+
+INSERT INTO Nurse 
+VALUES (207, Edward, Davis, 1972-05-06, 424-313-5985);
+
+INSERT INTO Nurse 
+VALUES (208, William, McCreary, 1988-12-28, 310-358-5513);
+
+INSERT INTO Nurse 
+VALUES (209, Frank, Tredway, 1976-02-0-1, 310-707-8829);
+
+INSERT INTO Nurse 
+VALUES (210, Gary, Thayer, 1979-03-11, 424-711-8008);
+
+INSERT INTO Nurse 
+VALUES (211, Betty, Shapiro, 1961-05-10, 424-485-5828);
+
+INSERT INTO Nurse 
+VALUES (212, Susan, Daley, 1956-09-23, 424-763-3802);
+
+INSERT INTO Nurse 
+VALUES (213, Daniel, Brighton, 1980-03-06, 310-707-8829);
+
+INSERT INTO Nurse 
+VALUES (214, Thomas, York, 1955-06-26, 310-351-3087);
+
+INSERT INTO Nurse 
+VALUES (300, Linda, Hyde, 1975-09-17, 424-796-7133);
+
+INSERT INTO Nurse 
+VALUES (301, Karen, LeRoy, 1977-05-02, 424-406-9557);
+
+INSERT INTO Nurse 
+VALUES (302, Donna, Kaufman, 1958-01-25, 424-795-1878);
+
+INSERT INTO Nurse 
+VALUES (303, George, Ketchum, 1976-04-06, 424-918-4509);
+
+INSERT INTO Nurse 
+VALUES (304, Linda, Hamley, 1961-02-13, 310-515-7824);
+# Nurse populated
+
+# Populate RegisteredNurse
+INSERT INTO RegisteredNurse 
+VALUES (300, Linda, Hyde, 1975-09-17, 424-796-7133);
+
+INSERT INTO RegisteredNurse 
+VALUES (301, Karen, LeRoy, 1977-05-02, 424-406-9557);
+
+INSERT INTO RegisteredNurse 
+VALUES (302, Donna, Kaufman, 1958-01-25, 424-795-1878);
+
+INSERT INTO RegisteredNurse 
+VALUES (303, George, Ketchum, 1976-04-06, 424-918-4509);
+
+INSERT INTO RegisteredNurse 
+VALUES (304, Linda, Hamley, 1961-02-13, 310-515-7824);
+# RegisteredNurse populated
+
+# Populate Staff
+INSERT INTO Staff 
+VALUES (400, Paul, LeRoy, 1969-08-02, 424-711-8008);
+
+INSERT INTO Staff 
+VALUES (401, Mary, Davis, 1956-05-06, 310-692-7304);
+
+INSERT INTO Staff 
+VALUES (402, Helen, Gomer, 1969-11-26, 424-560-5196);
+
+INSERT INTO Staff 
+VALUES (403, Daniel, McGuire, 1955-06-26, 424-795-1878);
+
+INSERT INTO Staff 
+VALUES (404, James, Hamley, 1969-03-16, 310-361-8461);
+
+INSERT INTO Staff 
+VALUES (405, Edward, Harte, 1964-11-18, 310-692-7304);
+
+INSERT INTO Staff 
+VALUES (406, Barbara, Garber, 1962-02-0-1, 310-758-9954);
+
+INSERT INTO Staff 
+VALUES (407, Donna, Tredway, 1955-06-26, 424-918-4509);
+
+INSERT INTO Staff 
+VALUES (408, Helen, Garber, 1955-06-26, 424-702-5854);
+
+INSERT INTO Staff 
+VALUES (409, Susan, Holland, 1968-08-19, 310-535-6933);
+# Staff Populated
+
+# Populate Technician
+INSERT INTO Technician 
+VALUES (500, Richard, Davis, 1982-03-30, 310-515-7824);
+
+INSERT INTO Technician 
+VALUES (501, Jose, Orman, 1988-04-30, 424-485-5828);
+
+INSERT INTO Technician 
+VALUES (502, Lisa, York, 1977-09-28, 424-247-6464);
+
+INSERT INTO Technician 
+VALUES (503, Timothy, Thayer, 1972-03-21, 310-413-8247);
+
+INSERT INTO Technician 
+VALUES (504, James, Kay, 1974-05-30, 310-283-7289);
+# Technician populated
+
+# Populate Patient
+INSERT INTO Patient 
+VALUES (600, Dorothy, Zimmer, 1973-12-29, 424-249-6484);
+
+INSERT INTO Patient 
+VALUES (601, Helen, Swanson, 1956-09-23, 424-855-8402);
+
+INSERT INTO Patient 
+VALUES (602, Anthony, Harte, 1956-05-06, 310-358-5513);
+
+INSERT INTO Patient 
+VALUES (603, Michael, Grimes, 1976-02-0-1, 310-758-9954);
+
+INSERT INTO Patient 
+VALUES (604, Gary, Hyde, 1971-05-02, 424-581-8797);
+
+INSERT INTO Patient 
+VALUES (605, Richard, Gomer, 1965-08-12, 424-432-4797);
+
+INSERT INTO Patient 
+VALUES (606, Mary, Heron, 1951-03-25, 424-512-5373);
+
+INSERT INTO Patient 
+VALUES (607, Anthony, Parker, 1988-04-30, 310-720-2079);
+
+INSERT INTO Patient 
+VALUES (608, Robert, Heron, 1975-09-17, 310-254-8330);
+
+INSERT INTO Patient 
+VALUES (609, Mary, Thayer, 1986-08-05, 310-692-7304);
+
+INSERT INTO Patient 
+VALUES (610, Ronald, Zoer, 1965-08-12, 424-921-9536);
+
+INSERT INTO Patient 
+VALUES (611, Sandra, Marx, 1972-03-21, 424-512-5373);
+
+INSERT INTO Patient 
+VALUES (612, Thomas, Orman, 1984-11-18, 310-707-8829);
+
+INSERT INTO Patient 
+VALUES (613, Brian, McCourt, 1970-10-10, 424-432-4797);
+
+INSERT INTO Patient 
+VALUES (614, Paul, Pickens, 1974-05-30, 424-795-1878);
+
+INSERT INTO Patient 
+VALUES (615, Christopher, Gomer, 1978-11-28, 424-808-6698);
+
+INSERT INTO Patient 
+VALUES (616, Brian, McGuire, 1956-05-06, 424-796-7133);
+
+INSERT INTO Patient 
+VALUES (617, Timothy, Grayson, 1951-03-25, 310-346-4892);
+
+INSERT INTO Patient 
+VALUES (618, Robert, Grimes, 1968-08-19, 424-405-5327);
+
+INSERT INTO Patient 
+VALUES (619, Paul, Benson, 1969-11-26, 310-283-7289);
+
+INSERT INTO Patient 
+VALUES (620, Richard, Walker, 1976-04-06, 310-692-7304);
+
+INSERT INTO Patient 
+VALUES (621, Barbara, Davis, 1971-05-02, 424-921-9536);
+
+INSERT INTO Patient 
+VALUES (622, Thomas, Bruckner, 1962-02-0-1, 310-442-1401);
+
+INSERT INTO Patient 
+VALUES (623, Donna, Heron, 1989-10-14, 424-432-4797);
+
+INSERT INTO Patient 
+VALUES (624, John, Zoer, 1958-01-25, 424-702-5854);
+
+INSERT INTO Patient 
+VALUES (625, George, Heron, 1951-09-29, 310-346-4892);
+
+INSERT INTO Patient 
+VALUES (626, Elizabeth, McCreary, 1979-03-11, 424-921-9536);
+
+INSERT INTO Patient 
+VALUES (627, Sandra, Hunter, 1975-03-18, 424-479-7376);
+
+INSERT INTO Patient 
+VALUES (628, Helen, Thomas, 1977-09-28, 424-313-5985);
+
+INSERT INTO Patient 
+VALUES (629, William, Holland, 1976-02-0-1, 424-468-3353);
+
+INSERT INTO Patient 
+VALUES (630, Robert, Bruckner, 1958-01-25, 310-692-7304);
+
+INSERT INTO Patient 
+VALUES (631, Larry, Tredway, 1988-04-30, 424-711-8008);
+
+INSERT INTO Patient 
+VALUES (632, Jose, Harris, 1984-07-27, 424-983-5228);
+
+INSERT INTO Patient 
+VALUES (633, Jose, Grimes, 1973-12-29, 424-512-5373);
+
+INSERT INTO Patient 
+VALUES (634, Betty, Pickens, 1959-03-25, 310-319-4733);
+
+INSERT INTO Patient 
+VALUES (635, Kenneth, Heron, 1964-11-18, 310-361-8461);
+
+INSERT INTO Patient 
+VALUES (636, Maria, Wright, 1951-09-29, 310-319-4733);
+
+INSERT INTO Patient 
+VALUES (637, Margaret, Tredway, 1984-07-27, 424-581-8797);
+
+INSERT INTO Patient 
+VALUES (638, Linda, Tredway, 1958-01-25, 310-401-4089);
+
+INSERT INTO Patient 
+VALUES (639, Kevin, Grayson, 1960-10-11, 310-965-6337);
+
+INSERT INTO Patient 
+VALUES (640, Lisa, Heron, 1976-02-0-1, 310-361-8461);
+
+INSERT INTO Patient 
+VALUES (641, Michael, Kay, 1959-03-25, 424-522-9521);
+
+INSERT INTO Patient 
+VALUES (642, Anthony, Bennington, 1972-03-21, 424-249-6484);
+
+INSERT INTO Patient 
+VALUES (643, Steven, Wright, 1981-01-28, 424-522-9521);
+
+INSERT INTO Patient 
+VALUES (644, Edward, McCourt, 1961-02-13, 424-485-5828);
+
+INSERT INTO Patient 
+VALUES (645, Donald, Tredway, 1956-09-23, 310-319-4733);
+
+INSERT INTO Patient 
+VALUES (646, Frank, Zumbelh, 1975-09-17, 310-707-8829);
+
+INSERT INTO Patient 
+VALUES (647, James, Grayson, 1986-01-10, 310-758-9954);
+
+INSERT INTO Patient 
+VALUES (648, Anthony, Shapiro, 1968-08-19, 310-442-1401);
+
+INSERT INTO Patient 
+VALUES (649, Kevin, Kaufman, 1968-08-19, 424-581-8797);
+
+INSERT INTO Patient 
+VALUES (650, Nancy, Kay, 1962-02-0-1, 424-468-3353);
+
+INSERT INTO Patient 
+VALUES (651, Daniel, Brighton, 1956-05-06, 424-212-2711);
+
+INSERT INTO Patient 
+VALUES (652, Donna, Harris, 1976-02-0-1, 424-468-3353);
+
+INSERT INTO Patient 
+VALUES (653, Ronald, Brockman, 1977-05-02, 424-313-5985);
+
+INSERT INTO Patient 
+VALUES (654, Anthony, Carr, 1975-03-18, 310-358-5513);
+
+INSERT INTO Patient 
+VALUES (655, Dorothy, Swanson, 1970-10-10, 310-630-5744);
+
+INSERT INTO Patient 
+VALUES (656, Karen, Benson, 1976-04-06, 310-361-8461);
+
+INSERT INTO Patient 
+VALUES (657, Jeffrey, Harris, 1984-07-27, 424-702-5854);
+
+INSERT INTO Patient 
+VALUES (658, Steven, McCreary, 1976-04-06, 424-313-5985);
+
+INSERT INTO Patient 
+VALUES (659, Thomas, Tredway, 1988-12-28, 424-485-5828);
+# Patient Populated
+
+# Populate Volunteer
+INSERT INTO Volunteer 
+VALUES (700, George, Walker, 1980-12-11, 310-539-2485);
+
+INSERT INTO Volunteer 
+VALUES (701, Betty, Ketchum, 1950-04-16, 310-777-4461);
+
+INSERT INTO Volunteer 
+VALUES (702, William, Ketchum, 1954-01-17, 424-310-7163);
+
+INSERT INTO Volunteer 
+VALUES (703, Joseph, Tredway, 1989-06-10, 310-368-1615);
+
+INSERT INTO Volunteer 
+VALUES (704, Matthew, Davis, 1950-07-18, 424-442-9302);
+
+INSERT INTO Volunteer 
+VALUES (705, William, Harmes, 1966-02-12, 424-519-9350);
+
+INSERT INTO Volunteer 
+VALUES (706, Kenneth, Bennington, 1950-07-18, 310-309-8803);
+
+INSERT INTO Volunteer 
+VALUES (707, Ronald, Chapman, 1974-10-25, 310-286-8720);
+
+INSERT INTO Volunteer 
+VALUES (708, Gary, Kay, 1975-12-27, 310-441-3754);
+
+INSERT INTO Volunteer 
+VALUES (709, Edward, Hyde, 1962-11-17, 310-465-8897);
+
+INSERT INTO Volunteer 
+VALUES (710, Edward, Kay, 1962-11-17, 310-317-3686);
+
+INSERT INTO Volunteer 
+VALUES (711, Elizabeth, Zimmer, 1987-06-04, 310-414-8094);
+
+INSERT INTO Volunteer 
+VALUES (712, Kenneth, Pickens, 1987-06-04, 310-703-3843);
+
+INSERT INTO Volunteer 
+VALUES (713, George, LeRoy, 1986-01-02, 424-238-9226);
+
+INSERT INTO Volunteer 
+VALUES (714, Frank, Hamley, 1986-12-27, 310-892-8558);
+
+INSERT INTO Volunteer 
+VALUES (715, Helen, Kaufman, 1977-03-30, 424-662-1426);
+
+INSERT INTO Volunteer 
+VALUES (716, Margaret, Chapman, 1957-02-20, 424-310-7163);
+
+INSERT INTO Volunteer 
+VALUES (717, Susan, Davis, 1967-05-24, 310-776-8869);
+
+INSERT INTO Volunteer 
+VALUES (718, Steven, Pickens, 1974-10-27, 424-310-7163);
+
+INSERT INTO Volunteer 
+VALUES (719, Linda, Wright, 1957-02-20, 310-465-8897);
+#Volunteer Populated
