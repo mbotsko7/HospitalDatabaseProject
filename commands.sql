@@ -176,6 +176,13 @@ CREATE TABLE Bed (
 	REFERENCES Resident(personID)
 );
 
+#EDIT 05_02
+ALTER TABLE CareCenter
+ADD beginVisitHours INT
+ALTER TABLE CareCenter
+ADD endVisitHours INT
+
+
 
 # Poulate the PersonInHospital
 
