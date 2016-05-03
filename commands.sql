@@ -194,7 +194,7 @@ ALTER TABLE Physician
 
 # Poulate the PersonInHospital
 
-NSERT INTO PersonInHospital
+INSERT INTO PersonInHospital
 VALUES (100, 'Jose', 'Kay', '1962-02-01', '424-435-4806');
  
 INSERT INTO PersonInHospital
