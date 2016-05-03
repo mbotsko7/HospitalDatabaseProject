@@ -560,6 +560,12 @@ VALUES (718, 'Steven', 'Pickens', '1974-10-27', '424-310-7163');
  
 INSERT INTO PersonInHospital
 VALUES (719, 'Linda', 'Wright', '1957-02-20', '310-465-8897');
+
+INSERT INTO PersonInHospital
+VALUES (720, 'Bobby', 'McBob', '2012-02-20', '311-465-8897');
+
+INSERT INTO PersonInHospital
+VALUES (721, 'Bob', 'McSmirff', '2012-02-21', '331-465-8897');
 # PersonInHospital populated
  
 # Populate Physician
@@ -915,6 +921,12 @@ VALUES (658, 100, '1990-01-21', 'George');
  
 INSERT INTO Patient
 VALUES (659, 101, '2002-12-29', 'James');
+
+INSERT INTO Patient
+VALUES (720, 101, '2012-02-25', 'Mimi');
+
+INSERT INTO Patient
+VALUES (721, 102, '2012-02-25', 'Zurg');
 # Patient Populated
  
 # Populate Volunteer
@@ -1127,6 +1139,7 @@ where Name = 'Emergency Center'
 update CareCenter
 set PersonID = 304
 where Name = 'Cardiology Center'
+
 
 #Populate Room
 INSERT INTO Room
@@ -1357,6 +1370,9 @@ VALUES (628, '2010-10-18', 'Care');
  
 INSERT INTO Resident
 VALUES (629, '2002-01-08', 'Care');
+
+INSERT INTO Resident
+VALUES (720, '2012-02-26', 'Care');
 # Resident Populated
 
 INSERT INTO Skill
@@ -1464,6 +1480,9 @@ VALUES (658);
 
 INSERT INTO Outpatient
 VALUES (659);
+
+INSERT INTO Outpatient
+VALUES (721);
 # Outpatient Populated
 
 # Populate Visit
@@ -1556,4 +1575,11 @@ VALUES (658, 104, '2011-02-28', 'Recovered');
 
 INSERT INTO Visit
 VALUES (659, 102, '2010-02-15', 'Recovered');
+
+INSERT INTO Visit
+VALUES (659, 102, '2012-03-05', 'Recovered');
+
+
+INSERT INTO Visit
+VALUES (721, 102, '2012-03-05', 'Recovered');
 # Visit Populated 
