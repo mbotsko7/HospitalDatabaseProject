@@ -672,83 +672,7 @@ INSERT INTO Employee
 VALUES (504, '2000-12-29');
 # Employee populated
  
-# populate Nurse
-INSERT INTO Nurse
-VALUES (200, 'Critical Care');
- 
-INSERT INTO Nurse
-VALUES (201, 'Critical Care');
- 
-INSERT INTO Nurse
-VALUES (202, 'Critical Care');
- 
-INSERT INTO Nurse
-VALUES (203, 'Critical Care');
- 
-INSERT INTO Nurse
-VALUES (204, 'Progressive Care');
- 
-INSERT INTO Nurse
-VALUES (205, 'Progressive Care');
- 
-INSERT INTO Nurse
-VALUES (206, 'Progressive Care');
- 
-INSERT INTO Nurse
-VALUES (207, 'Pediatric Clinical Specialist');
- 
-INSERT INTO Nurse
-VALUES (208, 'Pediatric Clinical Specialist');
- 
-INSERT INTO Nurse
-VALUES (209, 'Pediatric Clinical Specialist');
- 
-INSERT INTO Nurse
-VALUES (210, 'Pediatric Clinical Specialist');
- 
-INSERT INTO Nurse
-VALUES (211, 'Progressive Care');
- 
-INSERT INTO Nurse
-VALUES (212, 'Neonatal');
- 
-INSERT INTO Nurse
-VALUES (213, 'Neonatal');
- 
-INSERT INTO Nurse
-VALUES (214, 'Neonatal');
- 
-INSERT INTO Nurse
-VALUES (300, 'Pediatric Clinical Specialist');
- 
-INSERT INTO Nurse
-VALUES (301, 'Critical Care');
- 
-INSERT INTO Nurse
-VALUES (302, 'Progressive Care');
- 
-INSERT INTO Nurse
-VALUES (303, 'Critical Care');
- 
-INSERT INTO Nurse
-VALUES (304, 'Neonatal');
-# Nurse populated
- 
-# Populate RegisteredNurse
-INSERT INTO RegisteredNurse
-VALUES (300);
- 
-INSERT INTO RegisteredNurse
-VALUES (301);
- 
-INSERT INTO RegisteredNurse
-VALUES (302);
- 
-INSERT INTO RegisteredNurse
-VALUES (303);
- 
-INSERT INTO RegisteredNurse
-VALUES (304);
+
 # RegisteredNurse populated
  
 # Populate Staff
@@ -1053,7 +977,10 @@ VALUES ('Prenatal Laboratory', 'Maternity');
 INSERT INTO Laboratory
 VALUES ('Hematology', 'Research');
 # Laboratory populated
- 
+alter table CareCenter
+drop FOREIGN KEY fk_NurseInCharge
+alter table CareCenter
+drop personID
 # Populate CareCenter
 INSERT INTO CareCenter
 VALUES ('Maternity Center', 'Maternity', '10:00', '22:00');
@@ -1065,6 +992,105 @@ INSERT INTO CareCenter
 VALUES ('Cardiology Center', 'Cardiology', '10:00', '22:00');
 # CareCenter populated
  
+# populate Nurse
+INSERT INTO Nurse
+VALUES ('Emergency Center', 200, 'Critical Care');
+ 
+INSERT INTO Nurse
+VALUES ('Emergency Center', 201, 'Critical Care');
+ 
+INSERT INTO Nurse
+VALUES ('Emergency Center', 202, 'Critical Care');
+ 
+INSERT INTO Nurse
+VALUES ('Emergency Center', 203, 'Critical Care');
+ 
+INSERT INTO Nurse
+VALUES ('Cardiology Center', 204, 'Progressive Care');
+ 
+INSERT INTO Nurse
+VALUES ('Cardiology Center', 205, 'Progressive Care');
+ 
+INSERT INTO Nurse
+VALUES ('Cardiology Center', 206, 'Progressive Care');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center', 207, 'Pediatric Clinical Specialist');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',208, 'Pediatric Clinical Specialist');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',209, 'Pediatric Clinical Specialist');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',210, 'Pediatric Clinical Specialist');
+ 
+INSERT INTO Nurse
+VALUES ('Cardiology Center', 211, 'Progressive Care');
+ 
+INSERT INTO Nurse
+VALUES ('Cardiology Center', 212, 'Neonatal');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',213, 'Neonatal');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',214, 'Neonatal');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',300, 'Pediatric Clinical Specialist');
+ 
+INSERT INTO Nurse
+VALUES ('Emergency Center', 301, 'Critical Care');
+ 
+INSERT INTO Nurse
+VALUES ('Cardiology Center',302, 'Progressive Care');
+ 
+INSERT INTO Nurse
+VALUES ('Emergency Center',303, 'Critical Care');
+ 
+INSERT INTO Nurse
+VALUES ('Maternity Center',304, 'Neonatal');
+# Nurse populated
+ 
+# Populate RegisteredNurse
+INSERT INTO RegisteredNurse
+VALUES (300, 'Maternity Center');
+ 
+INSERT INTO RegisteredNurse
+VALUES (301, 'Maternity Center');
+ 
+INSERT INTO RegisteredNurse
+VALUES (302, 'Emergency Center');
+ 
+INSERT INTO RegisteredNurse
+VALUES (303, 'Emergency Center');
+ 
+INSERT INTO RegisteredNurse
+VALUES (304, 'Cardiology Center');
+
+ALTER TABLE CareCenter
+ADD personID INT;
+
+ALTER TABLE CareCenter
+ADD CONSTRAINT fk_NurseInCharge FOREIGN KEY (personID)
+REFERENCES RegisteredNurse(personID);
+
+update CareCenter
+set PersonID = 300
+where Name = 'Maternity Center'
+
+
+update CareCenter
+set PersonID = 302
+where Name = 'Emergency Center'
+
+
+update CareCenter
+set PersonID = 304
+where Name = 'Cardiology Center'
+
 #Populate Room
 INSERT INTO Room
 VALUES ('Maternity Center', 201, 2);
