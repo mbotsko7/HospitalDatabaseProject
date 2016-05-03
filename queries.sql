@@ -65,7 +65,7 @@ SELECT FirstName, LastName FROM Volunteer v
 		ON v.personID = p.personID
 WHERE Skill IS NULL;
 
-#3 List all Patients who are also Volunteers at the Hospital.
+#3 List all Patients who are also Volunteers at the Hospital. ADD SOMEONE
 SELECT FirstName, LastName FROM Patient pa
     INNER JOIN PersonInHospital p
     ON p.personID = pa.personID
@@ -81,13 +81,14 @@ SELECT FirstName, LastName FROM Outpatient o
     ON p.personID = pa.personID
     INNER JOIN Visit v
     ON o.personID = v.personID
+    GROUP BY LastName, FirstName
 HAVING COUNT(v.VisitDate) = 1;
 
 #5  each Skill list the total number of volunteers and technicians that achieve this skill.
 
 
 #6 Find all Care Centers where every bed is assigned to a Patient (i.e. no beds are available).
-SELECT c.Name FROM CareCenter c
+SELECT DISTINCT c.Name FROM CareCenter c
 		INNER JOIN Room rm
 		ON c.Name = rm.Name
 		INNER JOIN Bed b
