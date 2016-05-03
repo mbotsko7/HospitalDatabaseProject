@@ -195,7 +195,8 @@ WHERE v.physID <> pa.physID
 GROUP BY v.physID;
 	
 
-#16 Three more queries that involve the business rules that you added. Feel free to create more views for this.
+#16 Three more queries that involve the business rules that you added. 
+#Feel free to create more views for this.
 SELECT c.Name AS “Care Center”, COUNT(rm.RoomNum) AS “Number of Rooms”  FROM CareCenter c
 	INNER JOIN Room rm
 	ON c.Name = rm.Name
