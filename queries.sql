@@ -105,14 +105,10 @@ WHERE b.BedNum NOT IN (
 
 #7 List all Nurses who have an RN certificate but are not in charge of a Care Center. 
 SELECT FirstName, LastName FROM RegisteredNurse rn
-	INNER JOIN Nurse n
-	ON rn.personID = n.personID
-	INNER JOIN Employee e
-	ON rn.personID = e.personID
-INNER JOIN PersonInHospital p
-	ON rn.personID = p.personID
+    INNER JOIN PersonInHospital p
+    ON rn.personID = p.personID
 WHERE rn.personID NOT IN (
-	SELECT personID FROM CareCenter
+    SELECT personID FROM CareCenter
 );
 
 #8 List all Nurses that are in charge of a Care Center to which they are also assigned.
