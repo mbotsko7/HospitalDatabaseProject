@@ -175,6 +175,25 @@ SELECT r.FirstName, r.LastName, Status FROM Resident r
 		ON pa.personID = r.personID
 		INNER JOIN PersonInHospital p
 		ON p.personID = r.personID;
-	
-		
+
+
+
+
+
+
+
+
+
+
+
+
+CREATE VIEW AS CareCenter-Beds
+Select CareCenter.Name, Count(patient.personID) as TotalPatientsInBed, Count(BedNum)-Count(patient.personID), Count(BedNum)
+from CareCenter natural join room natural join bed natural join resident
+natural join patient
+
+select * from (Nurse natural join CareCenter) where Nurse.personID = CareCenter.fk_NurseInCharge
+
+select * from (Laboratory natural join TechnicianLab natural join Technician)
+where Count(Technician.skill) > 0	
 
