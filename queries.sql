@@ -8,23 +8,17 @@ SELECT FirstName, LastName, HireDate FROM Employee e
 #2 NursesInCharge: This view returns the name of the Nurse in Charge for each Care Center along with the phone number of the Nurse.
 CREATE VIEW NursesInCharge AS
 SELECT FirstName, LastName, ContactNumber, cc.Name FROM RegisteredNurse rn
-	INNER JOIN Nurse n
-	ON rn.personID = n.personID
-	INNER JOIN Employee e
-	ON rn.personID = e.personID
-INNER JOIN PersonInHospital p
-	ON rn.personID = p.personID
-	INNER JOIN CareCenter cc
-	ON rn.personID = cc.personID
+    INNER JOIN PersonInHospital p
+    ON rn.personID = p.personID
+    INNER JOIN CareCenter cc
+    ON rn.personID = cc.personID
 WHERE rn.personID IN (
-	SELECT personID FROM CareCenter
+    SELECT personID FROM CareCenter
 );
 		
 #3 : This view returns all the Technicians how have at least one skill.
 CREATE VIEW GoodTechnician AS
 SELECT FirstName, LastName FROM Technician t
-	INNER JOIN Employee e
-	ON t.personID = e.personID
 	INNER JOIN PersonInHospital p
 	ON t.personID = p.personID
 WHERE skill IS NOT NULL;
@@ -43,8 +37,6 @@ GROUP BY c.Name;
 #5 OutPatientsNotVisited: This view returns all OutPatients who have not been visited by a Physician yet.
 CREATE VIEW OutPatientsNotVisited AS
 SELECT FirstName, LastName, o.personID FROM Outpatient o
-	INNER JOIN Patient pa
-	ON o.personID = pa.personID
 	INNER JOIN PersonInHospital p
 	ON o.personID = p.personID
 	LEFT JOIN Visit v
@@ -54,8 +46,6 @@ WHERE VisitDate IS NULL;
 #Create the following Queries. Feel free to use any of the views that you created
 #1 For each Job Class list all the staff members belonging to this class.
 SELECT FirstName, LastName, JobClass FROM Staff s
-	INNER JOIN Employee e
-	ON e.personID = s.personID
 	INNER JOIN PersonInHospital p
 	ON p.personID = s.personID;
 
@@ -75,10 +65,8 @@ WHERE pa.personID IN (
 
 #4 Find each Outpatient who has been visited exactly once.
 SELECT FirstName, LastName FROM Outpatient o
-    INNER JOIN Patient pa
-    ON o.personID = pa.personID
     INNER JOIN PersonInHospital p
-    ON p.personID = pa.personID
+    ON p.personID = o.personID
     INNER JOIN Visit v
     ON o.personID = v.personID
     GROUP BY LastName, FirstName
@@ -131,8 +119,6 @@ WHERE Name NOT IN (
 
 #10 List all Resident patients that were admitted after the most current employee hire date.
 SELECT FirstName, LastName FROM Resident r
-	INNER JOIN Patient pa
-	ON r.personID = pa.personID
 	INNER JOIN PersonInHospital p
 	ON r.personID = p.personID
 WHERE AdmittedDate > (
@@ -141,10 +127,10 @@ WHERE AdmittedDate > (
 
 #11 Find all Patients who have been admitted within one week of their Contact Date. 
 SELECT FirstName, LastName FROM Patient pa
-		INNER JOIN Resident r
-		ON r.personID = pa.personID
-		INNER JOIN PersonInHospital p
-		ON pa.personID = p.personID
+	INNER JOIN Resident r
+	ON r.personID = pa.personID
+	INNER JOIN PersonInHospital p
+	ON pa.personID = p.personID
 WHERE ABS(DATEDIFF(AdmittedDate, ContactDate)) <= 7;
 
 #12 Find all Outpatients who have not been visited by a Physician within one week of their Contact Date.
@@ -179,10 +165,8 @@ HAVING COUNT(o.personID) > COUNT(r.personID);
 
 #15 Find each Physician who visited an Outpatient for whom he or she was not responsible for.
 SELECT FirstName, LastName FROM Patient pa
-    INNER JOIN Outpatient o 
-    ON o.personID = pa.personID
     INNER JOIN Visit v 
-    ON v.personID = o.personID
+    ON v.personID = pa.personID
     INNER JOIN Physician ph 
     ON ph.personID = v.physID
     INNER JOIN PersonInHospital p 
@@ -200,35 +184,19 @@ GROUP BY c.Name;
 
 SELECT FirstName, LastName, c.Name FROM CareCenter c
 	INNER JOIN Volunteer v
-	ON c.Name = v.Name
+	ON c.Name = v.CCName
 	INNER JOIN PersonInHospital p
 	ON p.personID = v.personID;
 	
-SELECT FirstName, LastName, Status FROM Resident r
-	INNER JOIN Patient pa
-	ON pa.personID = r.personID
+SELECT FirstName, LastName FROM Resident r
 	INNER JOIN PersonInHospital p
 	ON p.personID = r.personID
-ORDER BY Status, LastName ASC;
+WHERE Status = 'Stable'
+ORDER BY LastName ASC;
 
 
 
 
 
 
-
-
-
-
-
-
-CREATE VIEW AS CareCenter-Beds
-Select CareCenter.Name, Count(patient.personID) as TotalPatientsInBed, Count(BedNum)-Count(patient.personID), Count(BedNum)
-from CareCenter natural join room natural join bed natural join resident
-natural join patient
-
-select * from (Nurse natural join CareCenter) where Nurse.personID = CareCenter.fk_NurseInCharge
-
-select * from (Laboratory natural join TechnicianLab natural join Technician)
-where Count(Technician.skill) > 0	
 
