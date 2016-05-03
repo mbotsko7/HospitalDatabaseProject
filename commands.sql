@@ -189,7 +189,8 @@ ADD beginBusinessHours TIME;
 ALTER TABLE Laboratory
 ADD endBusinessHours TIME;
 
-
+ALTER TABLE Physician
+    MODIFY Pager VARCHAR(12);
 
 # Poulate the PersonInHospital
 
