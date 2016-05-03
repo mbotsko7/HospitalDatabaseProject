@@ -804,6 +804,7 @@ VALUES (503, 'Surgical');
  
 INSERT INTO Technician
 VALUES (504, 'Medical Lab');
+
 # Technician populated
  
 # Populate Patient
@@ -1049,3 +1050,163 @@ VALUES (718, Skill);
 INSERT INTO Volunteer
 VALUES (719, Skill);
 #Volunteer Populated
+
+
+# Populate Laboratory
+INSERT INTO Laboratory
+VALUES ('Prenatal Laboratory', 'Maternity');
+ 
+INSERT INTO Laboratory
+VALUES ('Hematology', 'Research');
+# Laboratory populated
+ 
+# Populate CareCenter
+INSERT INTO CareCenter
+VALUES ('Maternity Center', 'Maternity', '10:00', '22:00');
+ 
+INSERT INTO CareCenter
+VALUES ('Emergency Center', 'ER', '06:00', '22:00');
+ 
+INSERT INTO CareCenter
+VALUES ('Cardiology Center', 'Cardiology', '10:00', '22:00');
+# CareCenter populated
+ 
+#Populate Room
+INSERT INTO Room
+VALUES ('Maternity Center', 201, 2);
+ 
+INSERT INTO Room
+VALUES ('Maternity Center', 202, 2);
+ 
+INSERT INTO Room
+VALUES ('Maternity Center', 203, 2);
+ 
+INSERT INTO Room
+VALUES ('Maternity Center', 204, 2);
+ 
+INSERT INTO Room
+VALUES ('Maternity Center', 205, 2);
+ 
+INSERT INTO Room
+VALUES ('Emergency Center', 101, 1);
+ 
+INSERT INTO Room
+VALUES ('Emergency Center', 102, 1);
+ 
+INSERT INTO Room
+VALUES ('Emergency Center', 103, 1);
+ 
+INSERT INTO Room
+VALUES ('Emergency Center', 104, 1);
+ 
+INSERT INTO Room
+VALUES ('Emergency Center', 105, 1);
+ 
+INSERT INTO Room
+VALUES ('Cardiology Center', 301, 3);
+ 
+INSERT INTO Room
+VALUES ('Cardiology Center', 302, 3);
+ 
+INSERT INTO Room
+VALUES ('Cardiology Center', 303, 3);
+ 
+INSERT INTO Room
+VALUES ('Cardiology Center', 304, 3);
+ 
+INSERT INTO Room
+VALUES ('Cardiology Center', 305, 3);
+# Room Populated
+ 
+#Populate Bed
+INSERT INTO Bed
+VALUES (600, 1, 101);
+ 
+INSERT INTO Bed
+VALUES (601, 2, 101);
+ 
+INSERT INTO Bed
+VALUES (602, 1, 102);
+ 
+INSERT INTO Bed
+VALUES (603, 2, 102);
+ 
+INSERT INTO Bed
+VALUES (604, 1, 103);
+ 
+INSERT INTO Bed
+VALUES (605, 2, 103);
+ 
+INSERT INTO Bed
+VALUES (606, 1, 104);
+ 
+INSERT INTO Bed
+VALUES (607, 2, 104);
+ 
+INSERT INTO Bed
+VALUES (608, 1, 105);
+ 
+INSERT INTO Bed
+VALUES (609, 2, 105);
+ 
+INSERT INTO Bed
+VALUES (610, 1, 201);
+ 
+INSERT INTO Bed
+VALUES (611, 2, 201);
+ 
+INSERT INTO Bed
+VALUES (612, 1, 202);
+ 
+INSERT INTO Bed
+VALUES (613, 2, 202);
+ 
+INSERT INTO Bed
+VALUES (614, 1, 203);
+ 
+INSERT INTO Bed
+VALUES (615, 2, 203);
+ 
+INSERT INTO Bed
+VALUES (616, 1, 204);
+ 
+INSERT INTO Bed
+VALUES (617, 2, 204);
+ 
+INSERT INTO Bed
+VALUES (618, 1, 205);
+ 
+INSERT INTO Bed
+VALUES (619, 2, 205);
+ 
+INSERT INTO Bed
+VALUES (620, 1, 301);
+ 
+INSERT INTO Bed
+VALUES (621, 2, 301);
+ 
+INSERT INTO Bed
+VALUES (622, 1, 302);
+ 
+INSERT INTO Bed
+VALUES (623, 2, 302);
+ 
+INSERT INTO Bed
+VALUES (624, 1, 303);
+ 
+INSERT INTO Bed
+VALUES (625, 2, 303);
+ 
+INSERT INTO Bed
+VALUES (626, 1, 304);
+ 
+INSERT INTO Bed
+VALUES (627, 2, 304);
+ 
+INSERT INTO Bed
+VALUES (628, 1, 305);
+ 
+INSERT INTO Bed
+VALUES (629, 2, 305);
+# Bed Populated
+ 
