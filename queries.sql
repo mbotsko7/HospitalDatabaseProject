@@ -85,7 +85,10 @@ SELECT FirstName, LastName FROM Outpatient o
 HAVING COUNT(v.VisitDate) = 1;
 
 #5  each Skill list the total number of volunteers and technicians that achieve this skill.
-
+SELECT s.Skill, COUNT(*) AS "Number of People With Skill" FROM Skill s
+   LEFT JOIN Technician t ON t.Skill = s.Skill
+   LEFT JOIN Volunteer v ON v.Skill = s.Skill
+GROUP BY s.Skill;
 
 #6 Find all Care Centers where every bed is assigned to a Patient (i.e. no beds are available).
 SELECT DISTINCT c.Name FROM CareCenter c
