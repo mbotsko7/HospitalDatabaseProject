@@ -113,12 +113,13 @@ WHERE rn.personID NOT IN (
 );
 
 #8 List all Nurses that are in charge of a Care Center to which they are also assigned.
-SELECT FirstName, LastName FROM Nurse n 
-    INNER JOIN RegisteredNurse rn ON n.personID = rn.personID
-    INNER JOIN Employee e ON e.personID = n.personID
-    INNER JOIN PersonInHospital p ON p.personID = e.personID
-    INNER JOIN CareCenter cc ON cc.Name = rn.Name
-WHERE n.Name = rn.Name;
+SELECT * FROM NursesInCharge
+WHERE personID IN (
+	SELECT c.personID FROM CareCenter c
+            INNER JOIN Nurse n
+            ON n.Name = c.Name
+        WHERE n.personID = c.personID
+);
 
 #9 List all Laboratories, where all assigned technicians to that laboratory achieve at least one skill.
 SELECT Name FROM Laboratory l
