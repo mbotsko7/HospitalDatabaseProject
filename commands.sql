@@ -909,64 +909,83 @@ VALUES (659, 101, '2002-12-29', 'James');
  
 # Populate Volunteer
 INSERT INTO Volunteer
-VALUES (700, Skill);
+VALUES (700, 'Cafeteria');
  
 INSERT INTO Volunteer
-VALUES (701,Skill);
+VALUES (701, 'Cafeteria');
  
 INSERT INTO Volunteer
-VALUES (702, Skill);
+VALUES (702, 'Cafeteria');
  
 INSERT INTO Volunteer
-VALUES (703, Skill);
+VALUES (703, 'Cafeteria');
  
 INSERT INTO Volunteer
-VALUES (704, Skill);
+VALUES (704, 'Cafeteria');
  
 INSERT INTO Volunteer
-VALUES (705, Skill);
+VALUES (705, 'Gift Shop');
  
 INSERT INTO Volunteer
-VALUES (706, Skill);
+VALUES (706, 'Gift Shop');
  
 INSERT INTO Volunteer
-VALUES (707, Skill);
+VALUES (707, 'Gift Shop');
  
 INSERT INTO Volunteer
-VALUES (708, Skill);
+VALUES (708, 'Music');
  
 INSERT INTO Volunteer
-VALUES (709, Skill);
+VALUES (709, 'Music');
  
 INSERT INTO Volunteer
-VALUES (710, Skill);
+VALUES (710, 'Reading');
  
 INSERT INTO Volunteer
-VALUES (711, Skill);
+VALUES (711, 'Reading');
  
 INSERT INTO Volunteer
-VALUES (712, Skill);
+VALUES (712, 'Reading');
  
 INSERT INTO Volunteer
-VALUES (713, Skill);
+VALUES (713, 'Reading');
  
 INSERT INTO Volunteer
-VALUES (714, Skill);
+VALUES (714, 'Cleaning');
  
 INSERT INTO Volunteer
-VALUES (715, Skill);
+VALUES (715, 'Cleaning');
  
 INSERT INTO Volunteer
-VALUES (716, Skill);
+VALUES (716, 'Cleaning');
  
 INSERT INTO Volunteer
-VALUES (717, Skill);
+VALUES (717, '');
  
 INSERT INTO Volunteer
-VALUES (718, Skill);
+VALUES (718, '');
  
 INSERT INTO Volunteer
-VALUES (719, Skill);
+VALUES (719, '');
+#Volunteer Populated
+ 
+ 
+ 
+# Populate Technician
+INSERT INTO Technician
+VALUES (500, 'Clinical Laboratory');
+ 
+INSERT INTO Technician
+VALUES (501, 'Phlebotomy');
+ 
+INSERT INTO Technician
+VALUES (502, 'Medical Lab');
+ 
+INSERT INTO Technician
+VALUES (503, 'Surgical');
+ 
+INSERT INTO Technician
+VALUES (504, 'Medical Lab');
 #Volunteer Populated
 
 
