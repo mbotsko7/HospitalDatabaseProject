@@ -727,184 +727,184 @@ VALUES (504, 'Medical Lab');
  
 # Populate Patient
 INSERT INTO Patient
-VALUES (600, 'Dorothy', 'Zimmer', '1973-12-29', '424-249-6484');
+VALUES (600, 101, '2008-03-08', 'David');
  
 INSERT INTO Patient
-VALUES (601, 'Helen', 'Swanson', '1956-09-23', '424-855-8402');
+VALUES (601, 100, '2004-04-29', 'Edward');
  
 INSERT INTO Patient
-VALUES (602, 'Anthony', 'Harte', '1956-05-06', '310-358-5513');
+VALUES (602, 100, '1995-04-01', 'Carol');
  
 INSERT INTO Patient
-VALUES (603, 'Michael', 'Grimes', '1976-02-01', '310-758-9954');
+VALUES (603, 100, '2009-11-08', 'Betty');
  
 INSERT INTO Patient
-VALUES (604, 'Gary', 'Hyde', '1971-05-02', '424-581-8797');
+VALUES (604, 101, '1998-09-17', 'Kenneth');
  
 INSERT INTO Patient
-VALUES (605, 'Richard', 'Gomer', '1965-08-12', '424-432-4797');
+VALUES (605, 102, '1993-08-14', 'Linda');
  
 INSERT INTO Patient
-VALUES (606, 'Mary', 'Heron', '1951-03-25', '424-512-5373');
+VALUES (606, 103, '2000-11-21', 'Ruth');
  
 INSERT INTO Patient
-VALUES (607, 'Anthony', 'Parker', '1988-04-30', '310-720-2079');
+VALUES (607, 101, '2000-12-09', 'Jason');
  
 INSERT INTO Patient
-VALUES (608, 'Robert', 'Heron', '1975-09-17', '310-254-8330');
+VALUES (608, 101, '2001-02-22', 'William');
  
 INSERT INTO Patient
-VALUES (609, 'Mary', 'Thayer', '1986-08-05', '310-692-7304');
+VALUES (609, 101, '1995-10-15', 'Margaret');
  
 INSERT INTO Patient
-VALUES (610, 'Ronald', 'Zoer', '1965-08-12', '424-921-9536');
+VALUES (610, 100, '1996-10-01', 'David');
  
 INSERT INTO Patient
-VALUES (611, 'Sandra', 'Marx', '1972-03-21', '424-512-5373');
+VALUES (611, 102, '2001-08-13', 'Frank');
  
 INSERT INTO Patient
-VALUES (612, 'Thomas', 'Orman', '1984-11-18', '310-707-8829');
+VALUES (612, 102, '2002-03-06', 'Jeffrey');
  
 INSERT INTO Patient
-VALUES (613, 'Brian', 'McCourt', '1970-10-10', '424-432-4797');
+VALUES (613, 104, '2009-12-22', 'Mary');
  
 INSERT INTO Patient
-VALUES (614, 'Paul', 'Pickens', '1974-05-30', '424-795-1878');
+VALUES (614, 101, '2009-10-21', 'Christopher');
  
 INSERT INTO Patient
-VALUES (615, 'Christopher', 'Gomer', '1978-11-28', '424-808-6698');
+VALUES (615, 100, '1998-09-20', 'James');
  
 INSERT INTO Patient
-VALUES (616, 'Brian', 'McGuire', '1956-05-06', '424-796-7133');
+VALUES (616, 103, '2004-09-13', 'Jeffrey');
  
 INSERT INTO Patient
-VALUES (617, 'Timothy', 'Grayson', '1951-03-25', '310-346-4892');
+VALUES (617, 100, '2007-12-04', 'Matthew');
  
 INSERT INTO Patient
-VALUES (618, 'Robert', 'Grimes', '1968-08-19', '424-405-5327');
+VALUES (618, 102, '1995-04-22', 'Sandra');
  
 INSERT INTO Patient
-VALUES (619, 'Paul', 'Benson', '1969-11-26', '310-283-7289');
+VALUES (619, 103, '2008-04-02', 'Patricia');
  
 INSERT INTO Patient
-VALUES (620, 'Richard', 'Walker', '1976-04-06', '310-692-7304');
+VALUES (620, 101, '2003-08-28', 'George');
  
 INSERT INTO Patient
-VALUES (621, 'Barbara', 'Davis', '1971-05-02', '424-921-9536');
+VALUES (621, 101, '2005-04-03', 'Jennifer');
  
 INSERT INTO Patient
-VALUES (622, 'Thomas', 'Bruckner', '1962-02-01', '310-442-1401');
+VALUES (622, 100, '1992-07-21', 'Maria');
  
 INSERT INTO Patient
-VALUES (623, 'Donna', 'Heron', '1989-10-14', '424-432-4797');
+VALUES (623, 104, '2005-08-26', 'Donna');
  
 INSERT INTO Patient
-VALUES (624, 'John', 'Zoer', '1958-01-25', '424-702-5854');
+VALUES (624, 100, '2004-10-12', 'Maria');
  
 INSERT INTO Patient
-VALUES (625, 'George', 'Heron', '1951-09-29', '310-346-4892');
+VALUES (625, 103, '1997-03-12', 'Lisa');
  
 INSERT INTO Patient
-VALUES (626, 'Elizabeth', 'McCreary', '1979-03-11', '424-921-9536');
+VALUES (626, 101, '2002-02-26', 'Christopher');
  
 INSERT INTO Patient
-VALUES (627, 'Sandra', 'Hunter', '1975-03-18', '424-479-7376');
+VALUES (627, 104, '2005-02-18', 'Jose');
  
 INSERT INTO Patient
-VALUES (628, 'Helen', 'Thomas', '1977-09-28', '424-313-5985');
+VALUES (628, 100, '2000-09-15', 'Matthew');
  
 INSERT INTO Patient
-VALUES (629, 'William', 'Holland', '1976-02-0-1', '424-468-3353');
+VALUES (629, 100, '1998-09-17', 'Daniel');
  
 INSERT INTO Patient
-VALUES (630, 'Robert', 'Bruckner', '1958-01-25', '310-692-7304');
+VALUES (630, 103, '1998-03-01', 'Robert');
  
 INSERT INTO Patient
-VALUES (631, 'Larry', 'Tredway', '1988-04-30', '424-711-8008');
+VALUES (631, 103, '2004-02-05', 'Jeffrey');
  
 INSERT INTO Patient
-VALUES (632, 'Jose', 'Harris', '1984-07-27', '424-983-5228');
+VALUES (632, 104, '2000-07-24', 'Steven');
  
 INSERT INTO Patient
-VALUES (633, 'Jose', 'Grimes', '1973-12-29', '424-512-5373');
+VALUES (633, 103, '1995-09-07', 'Barbara');
  
 INSERT INTO Patient
-VALUES (634, 'Betty', 'Pickens', '1959-03-25', '310-319-4733');
+VALUES (634, 101, '1992-02-03', 'George');
  
 INSERT INTO Patient
-VALUES (635, 'Kenneth', 'Heron', '1964-11-18', '310-361-8461');
+VALUES (635, 101, '2001-03-19', 'John');
  
 INSERT INTO Patient
-VALUES (636, 'Maria', 'Wright', '1951-09-29', '310-319-4733');
+VALUES (636, 101, '1995-12-26', 'Mark');
  
 INSERT INTO Patient
-VALUES (637, 'Margaret', 'Tredway', '1984-07-27', '424-581-8797');
+VALUES (637, 101, '2004-12-22', 'Lisa');
  
 INSERT INTO Patient
-VALUES (638, 'Linda', 'Tredway', '1958-01-25', '310-401-4089');
+VALUES (638, 104, '1998-11-11', 'Timothy');
  
 INSERT INTO Patient
-VALUES (639, 'Kevin', 'Grayson', '1960-10-11', '310-965-6337');
+VALUES (639, 101, '2004-07-09', 'James');
  
 INSERT INTO Patient
-VALUES (640, 'Lisa', 'Heron', '1976-02-0-1', '310-361-8461');
+VALUES (640, 101, '1997-08-24', 'Ruth');
  
 INSERT INTO Patient
-VALUES (641, 'Michael', 'Kay', '1959-03-25', '424-522-9521');
+VALUES (641, 100, '1997-08-23', 'Jennifer');
  
 INSERT INTO Patient
-VALUES (642, 'Anthony', 'Bennington', '1972-03-21', '424-249-6484');
+VALUES (642, 101, '1999-04-01', 'Richard');
  
 INSERT INTO Patient
-VALUES (643, 'Steven', 'Wright', '1981-01-28', '424-522-9521');
+VALUES (643, 102, '2006-10-07', 'Linda');
  
 INSERT INTO Patient
-VALUES (644, 'Edward', 'McCourt', '1961-02-13', '424-485-5828');
+VALUES (644, 101, '2002-02-12', 'Steven');
  
 INSERT INTO Patient
-VALUES (645, 'Donald', 'Tredway', '1956-09-23', '310-319-4733');
+VALUES (645, 100, '2001-12-23', 'Helen');
  
 INSERT INTO Patient
-VALUES (646, 'Frank', 'Zumbelh', '1975-09-17', '310-707-8829');
+VALUES (646, 103, '2007-10-20', 'David');
  
 INSERT INTO Patient
-VALUES (647, 'James', 'Grayson', '1986-01-10', '310-758-9954');
+VALUES (647, 100, '1995-07-17', 'Donna');
  
 INSERT INTO Patient
-VALUES (648, 'Anthony', 'Shapiro', '1968-08-19', '310-442-1401');
+VALUES (648, 102, '1993-07-15', 'Maria');
  
 INSERT INTO Patient
-VALUES (649, 'Kevin', 'Kaufman', '1968-08-19', '424-581-8797');
+VALUES (649, 104, '2007-02-05', 'Jason');
  
 INSERT INTO Patient
-VALUES (650, 'Nancy', 'Kay', '1962-02-01', '424-468-3353');
+VALUES (650, 103, '1998-08-01', 'George');
  
 INSERT INTO Patient
-VALUES (651, 'Daniel', 'Brighton', '1956-05-06', '424-212-2711');
+VALUES (651, 102, '1998-05-02', 'Elizabeth');
  
 INSERT INTO Patient
-VALUES (652, 'Donna', 'Harris', '1976-02-01', '424-468-3353');
+VALUES (652, 103, '2007-04-24', 'Barbara');
  
 INSERT INTO Patient
-VALUES (653, 'Ronald', 'Brockman', '1977-05-02', '424-313-5985');
+VALUES (653, 101, '1992-09-12', 'Timothy');
  
 INSERT INTO Patient
-VALUES (654, 'Anthony', 'Carr', '1975-03-18', '310-358-5513');
+VALUES (654, 101, '1995-01-15', 'Larry');
  
 INSERT INTO Patient
-VALUES (655, 'Dorothy', 'Swanson', '1970-10-10', '310-630-5744');
+VALUES (655, 104, '1998-05-28', 'David');
  
 INSERT INTO Patient
-VALUES (656, 'Karen', 'Benson', '1976-04-06', '310-361-8461');
+VALUES (656, 102, '2002-10-12', 'Kenneth');
  
 INSERT INTO Patient
-VALUES (657, 'Jeffrey', 'Harris', '1984-07-27', '424-702-5854');
+VALUES (657, 101, '1992-12-22', 'Frank');
  
 INSERT INTO Patient
-VALUES (658, 'Steven', 'McCreary', '1976-04-06', '424-313-5985');
+VALUES (658, 100, '1990-01-21', 'George');
  
 INSERT INTO Patient
-VALUES (659, 'Thomas', 'Tredway', '1988-12-28', '424-485-5828');
+VALUES (659, 101, '2002-12-29', 'James');
 # Patient Populated
  
 # Populate Volunteer
@@ -1229,4 +1229,98 @@ VALUES (628, 1, 305);
 INSERT INTO Bed
 VALUES (629, 2, 305);
 # Bed Populated
+
+# Populate Resident
+INSERT INTO Resident
+VALUES (600, '2010-07-19', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (601, '2012-01-06', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (602, '2015-07-02', 'Coma');
+ 
+INSERT INTO Resident
+VALUES (603, '2001-06-27', 'Care');
+ 
+INSERT INTO Resident
+VALUES (604, '2014-04-23', 'Anesthetized');
+ 
+INSERT INTO Resident
+VALUES (605, '2010-09-25', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (606, '2004-08-03', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (607, '2005-05-30', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (608, '2002-02-25', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (609, '2006-01-20', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (610, '2010-06-20', 'Coma');
+ 
+INSERT INTO Resident
+VALUES (611, '2017-02-06', 'Care');
+ 
+INSERT INTO Resident
+VALUES (612, '2000-11-27', 'Care');
+ 
+INSERT INTO Resident
+VALUES (613, '2016-05-28', 'Care');
+ 
+INSERT INTO Resident
+VALUES (614, '2011-02-10', 'Anesthetized');
+ 
+INSERT INTO Resident
+VALUES (615, '2008-12-29', 'Anesthetized');
+ 
+INSERT INTO Resident
+VALUES (616, '2004-11-09', 'Anesthetized');
+ 
+INSERT INTO Resident
+VALUES (617, '2015-01-03', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (618, '2011-08-16', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (619, '2012-05-21', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (620, '2012-06-13', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (621, '2014-05-25', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (622, '2015-09-23', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (623, '2004-06-21', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (624, '2014-05-19', 'Stable');
+ 
+INSERT INTO Resident
+VALUES (625, '2000-10-24', 'Care');
+ 
+INSERT INTO Resident
+VALUES (626, '2008-04-11', 'Care');
+ 
+INSERT INTO Resident
+VALUES (627, '2010-08-11', 'Care');
+ 
+INSERT INTO Resident
+VALUES (628, '2010-10-18', 'Care');
+ 
+INSERT INTO Resident
+VALUES (629, '2002-01-08', 'Care');
+# Resident Populated
+
+
  
