@@ -159,7 +159,11 @@ WHERE personID NOT IN (
         WHERE ABS(DATEDIFF(v.VisitDate, pa.ContactDate)) <=7
 );
 #13 List all Physicians who have made more than 3 visits on a single day.
-
+SELECT DISTINCT FirstName, LastName FROM Physician ph
+    INNER JOIN PersonInHospital p ON p.personID = ph.personID
+    INNER JOIN Visit v ON ph.personID = v.physID
+    GROUP BY v.physID, VisitDate
+    HAVING COUNT(*) > 3;
 
 #14 List all Physicians that are responsible for more Outpatients than Resident Patients.
 SELECT FirstName, LastName FROM Physician ph
