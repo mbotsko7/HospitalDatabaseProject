@@ -1099,6 +1099,14 @@ VALUES (303, 'Emergency Center');
 INSERT INTO RegisteredNurse
 VALUES (304, 'Cardiology Center');
 
+update RegisteredNurse
+set Name = Null
+where personID = 300
+
+update RegisteredNurse
+set Name = Null
+where personID = 302
+
 ALTER TABLE CareCenter
 ADD personID INT;
 
