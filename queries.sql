@@ -42,8 +42,12 @@ GROUP BY c.Name;
 
 #5 OutPatientsNotVisited: This view returns all OutPatients who have not been visited by a Physician yet.
 CREATE VIEW OutPatientsNotVisited AS
-SELECT o.personID FROM Outpatient o
-	INNER JOIN Visit v
+SELECT FirstName, LastName, o.personID FROM Outpatient o
+	INNER JOIN Patient pa
+	ON o.personID = pa.personID
+	INNER JOIN PersonInHospital p
+	ON o.personID = p.personID
+	LEFT JOIN Visit v
 	ON o.personID = v. personID
 WHERE VisitDate IS NULL;
 
@@ -71,13 +75,13 @@ WHERE pa.personID IN (
 
 #4 Find each Outpatient who has been visited exactly once.
 SELECT FirstName, LastName FROM Outpatient o
-		INNER JOIN Patient pa
-		ON o.personID = pa.personID
-		INNER JOIN PersonInHospital p
-		ON o.personID = p.personID
-		INNER JOIN Visit v
-		ON o.personID = v.personID
-WHERE 
+    INNER JOIN Patient pa
+    ON o.personID = pa.personID
+    INNER JOIN PersonInHospital p
+    ON p.personID = pa.personID
+    INNER JOIN Visit v
+    ON o.personID = v.personID
+HAVING COUNT(v.VisitDate) = 1;
 
 #5  each Skill list the total number of volunteers and technicians that achieve this skill.
 
@@ -108,8 +112,21 @@ WHERE rn.personID NOT IN (
 );
 
 #8 List all Nurses that are in charge of a Care Center to which they are also assigned.
+SELECT FirstName, LastName FROM Nurse n 
+    INNER JOIN RegisteredNurse rn ON n.personID = rn.personID
+    INNER JOIN Employee e ON e.personID = n.personID
+    INNER JOIN PersonInHospital p ON p.personID = e.personID
+    INNER JOIN CareCenter cc ON cc.Name = rn.Name
+WHERE n.Name = rn.Name;
 
 #9 List all Laboratories, where all assigned technicians to that laboratory achieve at least one skill.
+SELECT Name FROM Laboratory l
+WHERE Name NOT IN (
+    SELECT l.Name FROM Laboratory l
+        INNER JOIN TechnicianLab tl ON l.Name = tl.Name
+        INNER JOIN Technician t ON t.personID = tl.personID
+    WHERE t.Skill IS NULL
+);
 
 #10 List all Resident patients that were admitted after the most current employee hire date.
 SELECT FirstName, LastName FROM Resident r
@@ -130,15 +147,15 @@ SELECT FirstName, LastName FROM Patient pa
 WHERE ABS(DATEDIFF(AdmittedDate, ContactDate)) <= 7;
 
 #12 Find all Outpatients who have not been visited by a Physician within one week of their Contact Date.
-SELECT FirstName, LastName FROM Outpatient o
-		INNER JOIN Patient pa
-		ON o.personID = pa.personID
-		INNER JOIN PersonInHospital p
-		ON o.personID = p.personID
-		INNER JOIN Visit v
-		ON o.personID = v.personID
-WHERE 
-
+SELECT * FROM OutPatientsNotVisited
+WHERE personID NOT IN (
+        SELECT o.personID FROM Outpatient o
+               INNER JOIN Patient pa 
+               ON pa.personID = o.personID
+               INNER JOIN Visit v
+               ON v.personID = o.personID
+        WHERE ABS(DATEDIFF(v.VisitDate, pa.ContactDate)) <=7
+);
 #13 List all Physicians who have made more than 3 visits on a single day.
 
 
