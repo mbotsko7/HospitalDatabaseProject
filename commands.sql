@@ -42,13 +42,22 @@ CREATE TABLE Patient (
 	CONSTRAINT fk_drID FOREIGN KEY (physID)
 	REFERENCES Physician(personID)
 );
-
 CREATE TABLE Volunteer (
 	personID INT,
 	Skill VARCHAR(40),
+	CCName VARCHAR(40),
 	CONSTRAINT pk_volunteerID PRIMARY KEY (personID),
 	CONSTRAINT fk_volunteerID FOREIGN KEY (personID)
-	REFERENCES PersonInHospital (personID)
+	REFERENCES PersonInHospital (personID),
+	CONSTRAINT fk_CCAssignment FOREIGN KEY (CCName)
+	REFERENCES CareCenter(Name),
+	CONSTRAINT fk_skill FOREIGN KEY (Skill)
+	REFERENCES Skill(Skill)
+);
+
+CREATE TABLE Skill(
+	Skill VARCHAR(40),
+	CONSTRAINT pk_skill PRIMARY KEY (Skill)
 );
 
 CREATE TABLE Staff (
@@ -909,64 +918,64 @@ VALUES (659, 101, '2002-12-29', 'James');
  
 # Populate Volunteer
 INSERT INTO Volunteer
-VALUES (700, 'Cafeteria');
+VALUES (700, 'Care', 'Emergency Center');
  
 INSERT INTO Volunteer
-VALUES (701, 'Cafeteria');
+VALUES (701, 'Care','Emergency Center');
+
+INSERT INTO Volunteer
+VALUES (702,'Care', 'Emergency Center');
  
 INSERT INTO Volunteer
-VALUES (702, 'Cafeteria');
+VALUES (703,'Care', 'Emergency Center');
  
 INSERT INTO Volunteer
-VALUES (703, 'Cafeteria');
+VALUES (704, 'Care','Emergency Center');
  
 INSERT INTO Volunteer
-VALUES (704, 'Cafeteria');
+VALUES (705, 'Counseling', 'Maternity Center');
  
 INSERT INTO Volunteer
-VALUES (705, 'Gift Shop');
+VALUES (706, 'Counseling', 'Maternity Center');
  
 INSERT INTO Volunteer
-VALUES (706, 'Gift Shop');
+VALUES (707, 'Counseling', 'Maternity Center');
  
 INSERT INTO Volunteer
-VALUES (707, 'Gift Shop');
+VALUES (708, 'Counseling', 'Maternity Center');
  
 INSERT INTO Volunteer
-VALUES (708, 'Music');
+VALUES (709,'Counseling', 'Maternity Center');
  
 INSERT INTO Volunteer
-VALUES (709, 'Music');
+VALUES (710,'Counseling','Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (710, 'Reading');
+VALUES (711,'Counseling', 'Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (711, 'Reading');
+VALUES (712, 'Hospice', 'Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (712, 'Reading');
+VALUES (713, 'Hospice', 'Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (713, 'Reading');
+VALUES (714,'Hospice','Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (714, 'Cleaning');
+VALUES (715, 'Hospice','Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (715, 'Cleaning');
+VALUES (716,'Hospice', 'Cardiology Center');
  
 INSERT INTO Volunteer
-VALUES (716, 'Cleaning');
+VALUES (717, Null, Null);
  
 INSERT INTO Volunteer
-VALUES (717, '');
+VALUES (718, Null, Null);
  
 INSERT INTO Volunteer
-VALUES (718, '');
- 
-INSERT INTO Volunteer
-VALUES (719, '');
+VALUES (719, Null,Null);
 #Volunteer Populated
  
  
@@ -1341,5 +1350,10 @@ INSERT INTO Resident
 VALUES (629, '2002-01-08', 'Care');
 # Resident Populated
 
-
+INSERT INTO Skill
+VALUES ('Care')
+INSERT INTO Skill
+VALUES ('Hospice')
+INSERT INTO Skill
+VALUES ('Counseling')
  
