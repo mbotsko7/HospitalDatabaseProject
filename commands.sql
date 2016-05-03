@@ -183,12 +183,6 @@ ADD beginVisitHours TIME;
 ALTER TABLE CareCenter
 ADD endVisitHours TIME;
 
-ALTER TABLE Laboratory
-ADD beginBusinessHours TIME;
-
-ALTER TABLE Laboratory
-ADD endBusinessHours TIME;
-
 ALTER TABLE Physician
     MODIFY Pager VARCHAR(12);
 
