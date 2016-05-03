@@ -161,6 +161,12 @@ CREATE TABLE RegisteredNurse (
          REFERENCES CareCenter (Name)
 );
 
+ALTER TABLE RegisteredNurse
+DROP FOREIGN KEY fk_RNCCName;
+
+ALTER TABLE RegisteredNurse
+DROP COLUMN Name;
+
 ALTER TABLE CareCenter
 ADD personID INT;
 
@@ -1583,3 +1589,11 @@ VALUES (659, 102, '2012-03-05', 'Recovered');
 INSERT INTO Visit
 VALUES (721, 102, '2012-03-05', 'Recovered');
 # Visit Populated 
+
+update Visit
+set VisitDate = '2012-03-05'
+where personID = 632
+
+update Visit
+set VisitDate = '2012-03-05'
+where personID = 648
