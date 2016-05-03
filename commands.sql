@@ -76,6 +76,10 @@ CREATE TABLE Technician (
 	REFERENCES Employee (personID)
 );
 
+ALTER TABLE Technician
+ADD CONSTRAINT fk_techSkill FOREIGN KEY (Skill)
+REFERENCES Skill(Skill)
+
 CREATE TABLE Laboratory ( 
 	Name VARCHAR(40),
 	LabLoc VARCHAR(40),
@@ -702,9 +706,6 @@ VALUES (404, 'Human Resources');
  
 INSERT INTO Staff
 VALUES (405, 'Finance');
- 
-INSERT INTO Staff
-VALUES (406, 'Finance');
  
 INSERT INTO Staff
 VALUES (407, 'Administrator');
@@ -1351,11 +1352,19 @@ VALUES (629, '2002-01-08', 'Care');
 # Resident Populated
 
 INSERT INTO Skill
-VALUES ('Care')
+VALUES ('Care');
 INSERT INTO Skill
-VALUES ('Hospice')
+VALUES ('Hospice');
 INSERT INTO Skill
-VALUES ('Counseling')
+VALUES ('Counseling');
+INSERT INTO Skill
+VALUES ('Clinical Laboratory');
+INSERT INTO Skill
+VALUES('Phlebotomy');
+INSERT INTO Skill
+VALUES ('Surgical');
+INSERT INTO Skill
+VALUES ('Medical Lab');
  
 # Populate Outpatient
 INSERT INTO Outpatient
