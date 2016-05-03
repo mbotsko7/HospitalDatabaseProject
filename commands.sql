@@ -115,7 +115,7 @@ CREATE TABLE Visit (
 	Comment VARCHAR(40),
 	CONSTRAINT fk_visitorID FOREIGN KEY (personID)
 	REFERENCES Outpatient (personID),
-	CONSTRAINT fk_physID FOREIGN KEY (personID)
+	CONSTRAINT fk_physID FOREIGN KEY (physID)
 	REFERENCES Physician(personID),
 	CONSTRAINT pk_visit PRIMARY KEY (personID, physID, VisitDate)
 );
@@ -1356,6 +1356,187 @@ INSERT INTO Skill
 VALUES ('Hospice')
 INSERT INTO Skill
 VALUES ('Counseling')
+ 
+# Populate Outpatient
+INSERT INTO Outpatient
+VALUES (630);
 
+INSERT INTO Outpatient
+VALUES (631);
 
+INSERT INTO Outpatient
+VALUES (632);
 
+INSERT INTO Outpatient
+VALUES (633);
+
+INSERT INTO Outpatient
+VALUES (634);
+
+INSERT INTO Outpatient
+VALUES (635);
+
+INSERT INTO Outpatient
+VALUES (636);
+
+INSERT INTO Outpatient
+VALUES (637);
+
+INSERT INTO Outpatient
+VALUES (638);
+
+INSERT INTO Outpatient
+VALUES (639);
+
+INSERT INTO Outpatient
+VALUES (640);
+
+INSERT INTO Outpatient
+VALUES (641);
+
+INSERT INTO Outpatient
+VALUES (642);
+
+INSERT INTO Outpatient
+VALUES (643);
+
+INSERT INTO Outpatient
+VALUES (644);
+
+INSERT INTO Outpatient
+VALUES (645);
+
+INSERT INTO Outpatient
+VALUES (646);
+
+INSERT INTO Outpatient
+VALUES (647);
+
+INSERT INTO Outpatient
+VALUES (648);
+
+INSERT INTO Outpatient
+VALUES (649);
+
+INSERT INTO Outpatient
+VALUES (650);
+
+INSERT INTO Outpatient
+VALUES (651);
+
+INSERT INTO Outpatient
+VALUES (652);
+
+INSERT INTO Outpatient
+VALUES (653);
+
+INSERT INTO Outpatient
+VALUES (654);
+
+INSERT INTO Outpatient
+VALUES (655);
+
+INSERT INTO Outpatient
+VALUES (656);
+
+INSERT INTO Outpatient
+VALUES (657);
+
+INSERT INTO Outpatient
+VALUES (658);
+
+INSERT INTO Outpatient
+VALUES (659);
+# Outpatient Populated
+
+# Populate Visit
+INSERT INTO Visit
+VALUES (630, 101, '2013-11-18', 'Recovered');
+
+INSERT INTO Visit
+VALUES (631, 100, '2014-08-27', 'Recovered');
+
+INSERT INTO Visit
+VALUES (632, 102, '2014-08-05', 'Recovered');
+
+INSERT INTO Visit
+VALUES (633, 100, '2014-11-10', 'Recovered');
+
+INSERT INTO Visit
+VALUES (634, 100, '2011-07-30', 'Recovered');
+
+INSERT INTO Visit
+VALUES (635, 100, '2012-03-17', 'Recovered');
+
+INSERT INTO Visit
+VALUES (636, 101, '2014-06-26', 'Recovered');
+
+INSERT INTO Visit
+VALUES (637, 101, '2011-05-30', 'Recovered');
+
+INSERT INTO Visit
+VALUES (638, 101, '2010-02-13', 'Recovered');
+
+INSERT INTO Visit
+VALUES (639, 104, '2013-04-10', 'Recovered');
+
+INSERT INTO Visit
+VALUES (640, 103, '2012-04-08', 'Recovered');
+
+INSERT INTO Visit
+VALUES (641, 101, '2011-01-05', 'Recovered');
+
+INSERT INTO Visit
+VALUES (642, 104, '2014-05-28', 'Recovered');
+
+INSERT INTO Visit
+VALUES (643, 101, '2014-10-27', 'Recovered');
+
+INSERT INTO Visit
+VALUES (644, 101, '2014-04-06', 'Recovered');
+
+INSERT INTO Visit
+VALUES (645, 100, '2014-04-08', 'Recovered');
+
+INSERT INTO Visit
+VALUES (646, 104, '2010-07-30', 'Recovered');
+
+INSERT INTO Visit
+VALUES (647, 104, '2011-03-13', 'Recovered');
+
+INSERT INTO Visit
+VALUES (648, 102, '2012-12-15', 'Recovered');
+
+INSERT INTO Visit
+VALUES (649, 104, '2011-03-08', 'Recovered');
+
+INSERT INTO Visit
+VALUES (650, 100, '2010-03-03', 'Recovered');
+
+INSERT INTO Visit
+VALUES (651, 101, '2014-10-13', 'Recovered');
+
+INSERT INTO Visit
+VALUES (652, 100, '2011-06-18', 'Recovered');
+
+INSERT INTO Visit
+VALUES (653, 104, '2011-07-18', 'Recovered');
+
+INSERT INTO Visit
+VALUES (654, 103, '2014-08-30', 'Recovered');
+
+INSERT INTO Visit
+VALUES (655, 102, '2013-02-11', 'Recovered');
+
+INSERT INTO Visit
+VALUES (656, 104, '2010-01-17', 'Recovered');
+
+INSERT INTO Visit
+VALUES (657, 101, '2012-01-17', 'Recovered');
+
+INSERT INTO Visit
+VALUES (658, 104, '2011-02-28', 'Recovered');
+
+INSERT INTO Visit
+VALUES (659, 102, '2010-02-15', 'Recovered');
+# Visit Populated 
