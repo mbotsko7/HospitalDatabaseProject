@@ -1,10 +1,4 @@
-/*
-Hospital Plan for test data
-Locations are divided between a north wing, south wing, west wing, and so forth.
-12 Floors, 10 rooms a floor, 2 beds a room
-Example for identifying numbers: 12101 ---> Floor 12, 10th room, bed or office 1
-Person IDs can be randomly generated or seqential (1,2,3...)
-*/
+
 CREATE TABLE PersonInHospital (
 	personID INT,
 	FirstName VARCHAR(40),
@@ -124,21 +118,12 @@ CREATE TABLE Visit (
 	CONSTRAINT pk_visit PRIMARY KEY (personID, physID, VisitDate)
 );
 
-#Cannot execute command
-
 CREATE TABLE CareCenter ( #actual
 	Name VARCHAR(40),
 	Location VARCHAR(40),
 	CONSTRAINT pk_CCName PRIMARY KEY (Name)
 );
-/*
-CREATE TABLE CareCenter (
-	Name VARCHAR(40),
-	Location VARCHAR(40)
-	pk_CCName PRIMARY KEY (Name),
-	fk_NurseInCharge FOREIGN KEY (personID)
-	REFERENCES RegisteredNurse (personID)
-); */
+
 
 CREATE TABLE Nurse (
     Name VARCHAR(40),
@@ -195,7 +180,7 @@ CREATE TABLE Bed (
 	REFERENCES Resident(personID)
 );
 
-#EDIT 05_02, new business rules
+
 ALTER TABLE CareCenter
 ADD beginVisitHours TIME;
 
@@ -205,7 +190,6 @@ ADD endVisitHours TIME;
 ALTER TABLE Physician
     MODIFY Pager VARCHAR(12);
 
-# Poulate the PersonInHospital
 
 INSERT INTO PersonInHospital
 VALUES (100, 'Jose', 'Kay', '1962-02-01', '424-435-4806');
