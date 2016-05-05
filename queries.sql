@@ -79,17 +79,12 @@ SELECT s.Skill, COUNT(*) AS "Number of People With Skill" FROM Skill s
 GROUP BY s.Skill;
 
 # 6 Find all Care Centers where every bed is assigned to a Patient (i.e. no beds are available).
-SELECT DISTINCT c.Name FROM CareCenter c
-		INNER JOIN Room rm
-		ON c.Name = rm.Name
-		INNER JOIN Bed b
-		ON b.RoomNum = rm.RoomNum
-WHERE b.BedNum NOT IN (
-		SELECT BedNum FROM Bed b
-			LEFT JOIN Resident r
-			ON r.personID = b.personID
-		WHERE r.personID IS NULL
-);
+SELECT c.Name FROM Bed b
+    INNER JOIN Room rm ON rm.RoomNum = b.RoomNum
+    INNER JOIN CareCenter c ON c.Name = rm.Name
+    LEFT JOIN Resident r ON r.personID = b.personID
+GROUP BY c.Name
+HAVING COUNT(*) = COUNT(r.personID);
 
 # 7 List all Nurses who have an RN certificate but are not in charge of a Care Center. 
 SELECT FirstName, LastName FROM RegisteredNurse rn
@@ -177,18 +172,22 @@ GROUP BY v.physID;
 	
 
 # 16 Three more queries that involve the business rules that you added. 
-#Feel free to create more views for this.
+
+
+# Lst the number of rooms in each CareCenter
 SELECT c.Name AS "Care Center", COUNT(*) AS "Number of Rooms" FROM CareCenter c
     INNER JOIN Room rm
     ON c.Name = rm.Name
 GROUP BY c.Name;
 
+# List Volunteers by which CareCenter they are assigned to
 SELECT FirstName, LastName, c.Name FROM CareCenter c
 	INNER JOIN Volunteer v
 	ON c.Name = v.CCName
 	INNER JOIN PersonInHospital p
 	ON p.personID = v.personID;
-	
+
+# List in alphabetical order Residents who are in stable condition	
 SELECT FirstName, LastName FROM Resident r
 	INNER JOIN PersonInHospital p
 	ON p.personID = r.personID
