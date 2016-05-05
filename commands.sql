@@ -1519,11 +1519,6 @@ VALUES (637, 101, '2011-05-30', 'Recovered');
 INSERT INTO Visit
 VALUES (638, 101, '2010-02-13', 'Recovered');
 
-INSERT INTO Visit
-VALUES (639, 104, '2013-04-10', 'Recovered');
-
-INSERT INTO Visit
-VALUES (640, 103, '2012-04-08', 'Recovered');
 
 INSERT INTO Visit
 VALUES (641, 101, '2011-01-05', 'Recovered');
@@ -1597,3 +1592,21 @@ where personID = 632
 update Visit
 set VisitDate = '2012-03-05'
 where personID = 648
+
+INSERT INTO PersonInHospital
+VALUES (660, 'Homer', 'Simpson', '1980-02-12', '512-125-1298');
+ 
+INSERT INTO PersonInHospital
+VALUES (661, 'Peter', 'Griffin', '1980-06-21', '512-693-7412');
+ 
+INSERT INTO Patient
+VALUES (660, 104, '2010-12-29', 'Marge');
+ 
+INSERT INTO Patient
+VALUES (661, 104, '2011-11-21', 'Lois');
+ 
+INSERT INTO Volunteer
+VALUES (660, 'Hospice', 'Emergency Center');
+ 
+INSERT INTO Volunteer
+VALUES (661, 'Hospice', 'Emergency Center');
